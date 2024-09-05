@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="grey">#95231F1F</color>
+    <color name="cd_color">#D06FC9F1</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="green">#4CAF50</color>
+    <color name="validation_error">#DAF15136</color>
+    <color name="backgroundColor">#4AF3D19F</color>
+    <color name="cardBackgroundColor">#4AF4DEBB</color>
+
+    <!--text color-->
+    <color name="textColorWhite2">#E8E4E4</color>
+    <color name="textColorBlack1">#000000</color>
+    <color name="textColorBlack2">#D5131313</color>
+
+    <!--black color-->
+    <color name="black30">#4d4d4d</color>
+    <color name="black50">#B3ACAC</color>
+
+    <!--white color-->
+    <color name="white95">#f2f2f2</color>
+    <color name="white90">#e6e6e6</color>
+
+    <color name="red">#F44336</color>
+
+    <color name="zxing_viewfinder_laser">#ff9800</color>
+    <color name="zxing_possible_result_points">#cc7a00</color>
+
+
+    <!-- some colors value for qr code scanner-->
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_status_text">#ffffffff</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="zxing_viewfinder_mask">#86000000</color>
+
 </resources>
