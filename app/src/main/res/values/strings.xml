@@ -1,3 +1,59 @@
 <resources>
     <string name="app_name">Onetouch</string>
+
+    <string name="keep_me_login">Keep Me Login</string>
+    <string name="submit">Submit</string>
+    <string name="rooted_device_message">Sorry! your device isn\'t passing Tramo Norton\'s security checks.This may be because your device is rooted,or is running an un certified or custom OS build. As a result, Tramo Norton can\'t confirm that device meets Tramo Norton\'s security standards.</string>
+    <string name="rooted_device_title">App can\'t run, this is rooted device</string>
+    <string name="no_internet_message">App is enable to access your network connection, make sure your device has sufficient connection</string>
+    <string name="please_check_transaction_report">Please Check Transaction Report</string>
+    <string name="transaction_error_message">Your transaction done with unknown response, please check report for status(may be success, failed, or not happened yet)</string>
+    <string name="login">Login</string>
+    <string name="failed">Failed</string>
+    <string name="select_brand">Select Brand</string>
+    <string name="otp_is">your otp is</string>
+
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="resetting_password">Resetting password</string>
+    <string name="alt_mobile">Alt Mobile</string>
+    <string name="colon">   : </string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="pincode">Pincode</string>
+    <string name="aadhaar_number">Aadhaar Number</string>
+    <string name="gst_number">Gst Number</string>
+    <string name="pan_number">Pan Number</string>
+
+
+    <string name="selected_item">Select Service :</string>
+    <string-array name="Services">
+        <item>Balance Enquiry</item>
+        <item>Cash Withdraw</item>
+        <item>Mini Statement</item>
+    </string-array>
+    <string name="selected_finger">Select Finger :</string>
+    <string-array name="Finger">
+        <item>FIR</item>
+        <item>FMI</item>
+        <item>FMR</item>
+    </string-array>
+
+    <string name="selected_bank">Select Bank :</string>
+
+    <string-array name="Bank">
+        <item>Select Bank</item>
+        <item>State Bank of India</item>
+        <item>HDFC Bank</item>
+        <item>Paytm Payment Bank</item>
+        <item>ICICI Bank</item>
+        <item>Yes Bank</item>
+        <item>PNB Bank</item>
+        <item>Kotak Mahindra Bank</item>
+        <item>Union Bank</item>
+        <item>Andhra  Bank</item>
+
+    </string-array>
+
 </resources>
