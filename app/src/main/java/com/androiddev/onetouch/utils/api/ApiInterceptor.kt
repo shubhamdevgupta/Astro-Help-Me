@@ -1,6 +1,7 @@
 package com.androiddev.onetouch.utils.api
 
 import com.androiddev.onetouch.data.local.AppPreference
+import okhttp3.Credentials
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
@@ -41,6 +42,10 @@ class ApiInterceptor @Inject constructor(
         request = request.newBuilder()
             .addHeader("Content-Type", "application/json")
             .addHeader("Accept", "application/json")
+            .header(
+                "Authorization",
+                Credentials.basic("onetouchexpress3", "6742729ea782d39d327b72b8c1a989b46c90b584")
+            )
             .build()
         return request
     }

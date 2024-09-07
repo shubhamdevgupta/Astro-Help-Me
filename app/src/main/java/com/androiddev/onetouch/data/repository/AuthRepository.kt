@@ -6,7 +6,7 @@ import javax.inject.Singleton
 
 @Singleton
 class AuthRepository @Inject constructor(private val authService: AuthService) {
-    suspend fun appLogin(phone: String,authorizaiton:String) = authService.appLogin(phone,authorizaiton)
+    suspend fun appLogin(phone: String,status:String,id:String) = authService.appLogin(phone,status,id)
     /*
     suspend fun biometricAuth(data: Map<String?, String?>?) = authService.biometricAuth(data)
     suspend fun fetchBankList(channelType: String, token: String) =
