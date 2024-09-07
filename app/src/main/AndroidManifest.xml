@@ -20,6 +20,12 @@
             android:name=".ui.activity.AuthActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.activity.ErrorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.BaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.SplashActivity"
             android:exported="true" >
             <intent-filter>

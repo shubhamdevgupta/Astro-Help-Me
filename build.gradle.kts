@@ -8,7 +8,7 @@ buildscript {
     // Dependencies for build script, such as the Kotlin plugin
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
-        classpath ("com.android.tools.build:gradle:8.2.0")
+        classpath ("com.android.tools.build:gradle:8.2.2")
 
     }
 }
@@ -19,7 +19,7 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.9.0" apply false
     id("org.jetbrains.kotlin.jvm") version "1.9.0" apply false
 
-    id("com.google.dagger.hilt.android") version "2.42" apply false
+    id("com.google.dagger.hilt.android") version "2.48" apply false
     id ("androidx.navigation.safeargs") version "2.5.3" apply false
 
 }

@@ -8,6 +8,7 @@ import com.androiddev.onetouch.data.local.AppPreference
 import com.androiddev.onetouch.data.local.LocalDB
 import com.androiddev.onetouch.utils.extns.fullScreen
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
 
