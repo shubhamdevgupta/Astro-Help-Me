@@ -31,8 +31,8 @@ class AuthViewModel @Inject constructor(
             try {
                 val response = withContext(Dispatchers.IO) {
                     apiRequest {
-                        repository.appLogin(
-                            "7011740628", "", ""
+                        repository.loginbymobile(
+                            mobileNumber, "", ""
                         )
                     }
                 }

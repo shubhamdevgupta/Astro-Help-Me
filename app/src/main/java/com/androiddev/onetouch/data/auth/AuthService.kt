@@ -10,10 +10,14 @@ import retrofit2.http.*
 interface AuthService {
 
     @GET("get_user_by_phone/{phone}/{status}/{isd}")
-    suspend fun appLogin(
+    suspend fun loginbymobile(
         @Path("phone") phoneNumber: String,
         @Path("status") status: String,
         @Path("isd") isd: String
+    ): Response<ApiResponse>
+    @GET("get_user_by_username/{username}")
+    suspend fun loginbyusername(
+        @Path("username") userName: String,
     ): Response<ApiResponse>
 
 }

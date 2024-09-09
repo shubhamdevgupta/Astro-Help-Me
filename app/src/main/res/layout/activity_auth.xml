@@ -43,13 +43,6 @@
                     android:layout_margin="8dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Customer Portal Login"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
@@ -61,7 +54,7 @@
                             android:id="@+id/etMobile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Enter Registered Mobile"
+                            android:hint="Enter Your Username"
                             android:inputType="number"
                             android:maxLength="10"
                             android:text="@={viewModel.mobileNumber}" />
@@ -78,13 +71,33 @@
                             android:id="@+id/et_uername"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Enter Username (optional)"
+                            android:hint="Enter Username Password"
                             android:text="@={viewModel.userName}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Forgot Password"
+                        android:textAllCaps="false"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:padding="4dp"
+                        android:text="I agree to the Terms and Condition &amp; Privacy Policy"
+                        android:textSize="14sp" />
+
+                    <Button
                         android:id="@+id/btnLogin"
+                        style="@style/Widget.MaterialComponents.Button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
@@ -92,6 +105,17 @@
                         android:onClick="@{viewModel::onLoginClick}"
                         android:padding="14dp"
                         android:text="Login" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Sign In with Credentials "
+                        android:textAllCaps="false"
+                        android:textSize="16sp" />
 
 
                 </LinearLayout>
