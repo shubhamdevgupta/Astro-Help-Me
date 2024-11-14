@@ -39,10 +39,7 @@ android {
     kotlinOptions {
         jvmTarget = "18"
     }
-    dataBinding {
-        enable = true
-    }
-    viewBinding.enable=true
+
 }
 
 dependencies {

@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.androiddev.onetouch.ui.viewmodel.AuthViewModel" />
+            type="com.androiddev.vastushikar.ui.viewmodel.AuthViewModel" />
 
     </data>
 
