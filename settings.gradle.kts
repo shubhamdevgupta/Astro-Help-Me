@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Onetouch"
+rootProject.name = "VastuShikar"
 include(":app")

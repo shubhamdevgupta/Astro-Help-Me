@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.androiddev.onetouch"
+    namespace = "com.androiddev.vastushikar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.androiddev.onetouch"
+        applicationId = "com.androiddev.vastushikar"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -40,6 +40,8 @@ android {
         jvmTarget = "18"
     }
 
+    viewBinding.enable=true
+    dataBinding.enable=true
 }
 
 dependencies {
@@ -52,8 +54,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 
     implementation("com.google.android.play:app-update-ktx:+")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0")
-
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.21")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.9.21")
     //navigation arguments
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")

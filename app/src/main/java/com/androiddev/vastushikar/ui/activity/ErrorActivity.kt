@@ -2,8 +2,8 @@ package com.androiddev.vastushikar.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.androiddev.vastushikar.OneTouch
 import com.androiddev.vastushikar.R
+import com.androiddev.vastushikar.VastuShikar
 import com.androiddev.vastushikar.data.local.AppPreference
 import com.androiddev.vastushikar.databinding.ActivityErrorBinding
 import com.androiddev.vastushikar.utils.extns.LottieType
@@ -79,10 +79,10 @@ class ErrorActivity : AppCompatActivity() {
             NAVIGATE_TO_LOGIN ->
                 launchActivity(AuthActivity::class.java, forgotAll = true)
             NAVIGATE_TO_MAIN ->
-                launchActivity(OneTouch::class.java, forgotAll = true)
+                launchActivity(VastuShikar::class.java, forgotAll = true)
             else -> {
                 if (type == NETWORK_EXCEPTION && isTransactionApi)
-                    launchActivity(OneTouch::class.java, forgotAll = true)
+                    launchActivity(VastuShikar::class.java, forgotAll = true)
                 else super.onBackPressed()
             }
         }

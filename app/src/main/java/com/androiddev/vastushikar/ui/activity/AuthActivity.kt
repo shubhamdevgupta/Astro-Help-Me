@@ -5,7 +5,8 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.androiddev.onetouch.databinding.ActivityAuthBinding
+import com.androiddev.vastushikar.R
+import com.androiddev.vastushikar.databinding.ActivityAuthBinding
 import com.androiddev.vastushikar.ui.viewmodel.AuthViewModel
 import com.androiddev.vastushikar.utils.api.Resource
 import dagger.hilt.android.AndroidEntryPoint
