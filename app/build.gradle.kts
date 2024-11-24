@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.androiddev.vastushikar"
+    namespace = "com.androiddev.astrohelpme"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.androiddev.vastushikar"
+        applicationId = "com.androiddev.astrohelpme"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,11 +33,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_18
-        targetCompatibility = JavaVersion.VERSION_18
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "18"
+        jvmTarget = "1.8"
     }
 
     viewBinding.enable=true
