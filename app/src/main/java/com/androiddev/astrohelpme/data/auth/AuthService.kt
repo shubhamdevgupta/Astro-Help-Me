@@ -1,23 +1,21 @@
 package com.androiddev.astrohelpme.data.auth
 
 
-import com.androiddev.astrohelpme.data.response.loginresponse.ApiResponse
-
+import com.androiddev.astrohelpme.data.response.SignupResponse
+import com.google.gson.annotations.SerializedName
 import retrofit2.Response
-import retrofit2.http.*
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 
 interface AuthService {
 
-    @GET("get_user_by_phone/{phone}/{status}/{isd}")
-    suspend fun loginbymobile(
-        @Path("phone") phoneNumber: String,
-        @Path("status") status: String,
-        @Path("isd") isd: String
-    ): Response<ApiResponse>
-    @GET("get_user_by_username/{username}")
-    suspend fun loginbyusername(
-        @Path("username") userName: String,
-    ): Response<ApiResponse>
+    @POST("register/send-otp")
+    suspend fun userSignup(@Body userSignup: UserSignup): Response<SignupResponse>
 
 }
+
+class UserSignup internal constructor(
+    @SerializedName("mobile_number")
+    val mobileNumber: String
+)

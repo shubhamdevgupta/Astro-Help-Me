@@ -1,16 +1,7 @@
 package com.androiddev.astrohelpme.ui.viewmodel
 
-import android.util.Log
-import android.view.View
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import com.androiddev.astrohelpme.data.repository.AuthRepository
-import com.androiddev.astrohelpme.data.response.loginresponse.ApiResponse
-import com.androiddev.astrohelpme.utils.api.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 
@@ -21,28 +12,6 @@ class AuthViewModel @Inject constructor(
 
     var mobileNumber: String = ""
     var userName: String = ""
-    private val _loginObserver = MutableLiveData<Resource<ApiResponse>>()
-    val loginResponse: MutableLiveData<Resource<ApiResponse>>
-        get() = _loginObserver
-
-    fun onLoginClick(view: View) {
-        _loginObserver.value = Resource.Loading<Nothing>()
-        viewModelScope.launch {
-            try {
-                val response = withContext(Dispatchers.IO) {
-                    apiRequest {
-                        repository.loginbymobile(
-                            mobileNumber, "", ""
-                        )
-                    }
-                }
-                Log.d("MYTAG", "response: " + response.toString())
-            } catch (e: Exception) {
-                Log.d("MYTAG", "onerror: " + e.message)
-                _loginObserver.value = Resource.Failure(e)
-            }
-        }
-    }
 
 
 }
