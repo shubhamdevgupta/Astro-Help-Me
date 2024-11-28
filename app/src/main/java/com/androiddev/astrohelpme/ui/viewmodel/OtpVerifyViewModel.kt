@@ -22,7 +22,7 @@ class OtpVerifyViewModel @Inject constructor(
     private val appPreference: AppPreference,
 ) : BaseViewModel() {
     var userId: String = AppConstants.EMPTY
-    var mobileNumber: String = AppConstants.EMPTY
+    var otp: String = AppConstants.EMPTY
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
 
 
@@ -32,16 +32,16 @@ class OtpVerifyViewModel @Inject constructor(
 
     fun onNextClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
-        if (!validateLoginInput()) return@onNextClick
         _otpVerifyResponse.value = Resource.Loading<Nothing>()
+        Log.d("MYTAG", "onNextClick: " + userId + "    otp entered" + otp)
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
                     apiRequest {
-                        authRepository.otpVerify(OTPVerify(userId, mobileNumber))
+                        authRepository.otpVerify(OTPVerify(userId, otp))
                     }
                 }
-                Log.d("MYTAG", "onSubmitClick: button clickedd")
+                Log.d("MYTAG", "onSubmitClick: button clickedd" + userId)
                 _otpVerifyResponse.value = Resource.Success(response)
             } catch (e: Exception) {
                 _otpVerifyResponse.value = Resource.Failure(e)
@@ -50,7 +50,7 @@ class OtpVerifyViewModel @Inject constructor(
     }
 
     fun validateLoginInput(): Boolean {
-        val message = if (mobileNumber.isNotEmpty() && mobileNumber.length == 10) {
+        val message = if (otp.isNotEmpty() && otp.length == 6) {
             if (userId.isNotEmpty()) {
                 return true
             } else "user id not found"

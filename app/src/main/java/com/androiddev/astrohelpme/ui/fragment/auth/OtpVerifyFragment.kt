@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
 import com.androiddev.astrohelpme.databinding.FragmentOtpVerifyBinding
@@ -20,13 +21,13 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         val userID = arguments?.getString("user_id")
         val mobileNumber = arguments?.getString("mobile")
 
-        viewModel.mobileNumber = mobileNumber.toString()
         viewModel.userId = userID.toString()
-
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -60,6 +61,6 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
 
     private fun onValidateRespone(data: OtpVerifyResponse) {
 
-
+        findNavController().navigate(R.id.action_otpVerifyFragment_to_createPasswordFragment)
     }
 }

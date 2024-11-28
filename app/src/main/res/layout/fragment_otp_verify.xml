@@ -69,6 +69,7 @@
                         android:hint="Enter your otp"
                         android:inputType="number"
                         android:maxLength="6"
+                        android:text="@={viewModel.otp}"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 

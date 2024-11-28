@@ -23,9 +23,6 @@
         <action
             android:id="@+id/action_signupFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
-        <argument
-            android:name="userId"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/otpVerifyFragment"
