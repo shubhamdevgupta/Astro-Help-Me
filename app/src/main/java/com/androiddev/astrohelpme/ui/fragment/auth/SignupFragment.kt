@@ -60,8 +60,13 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(R.layout.fragment_sig
     private fun onSignUpResponse(data: SignupResponse) {
         if (data.message == "OTP sent successfully.") {
             val userId = data.user_id.toString()
-           // val action = SignupFragmentDirections.actionSignupFragmentToOtpVerifyFragment(userId)
-            //findNavController().navigate(action)
+
+            val bundle = Bundle().apply {
+                putString("user_id", userId)
+                putString("mobile",viewModel.mobileNumber)
+            }
+            findNavController().navigate(R.id.otpVerifyFragment, bundle)
+
         }
     }
 

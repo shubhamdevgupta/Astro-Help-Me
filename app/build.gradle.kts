@@ -57,8 +57,8 @@ dependencies {
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.21")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.9.21")
     //navigation arguments
-    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
 
     // ViewModel & live data
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")

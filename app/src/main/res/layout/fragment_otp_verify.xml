@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.androiddev.astrohelpme.ui.viewmodel.SignUpViewModel" />
+            type="com.androiddev.astrohelpme.ui.viewmodel.OtpVerifyViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
@@ -47,6 +47,7 @@
                     android:textSize="36sp" />
 
                 <TextView
+                    android:id="@+id/tvMobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -88,6 +89,7 @@
                     android:layout_margin="28dp"
                     android:backgroundTint="#ffffff"
                     android:text="Next"
+                    android:onClick="@{viewModel::onNextClick}"
                     android:textColor="@color/black" />
 
             </LinearLayout>
