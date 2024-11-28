@@ -2,6 +2,7 @@ package com.androiddev.astrohelpme.data.auth
 
 
 import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
+import com.androiddev.astrohelpme.data.response.SetPassResponse
 import com.androiddev.astrohelpme.data.response.SignupResponse
 import com.google.gson.annotations.SerializedName
 import retrofit2.Response
@@ -17,6 +18,9 @@ interface AuthService {
     @POST("register/verify-otp")
     suspend fun otpVerify(@Body otpVerify: OTPVerify): Response<OtpVerifyResponse>
 
+    @POST("register/set-password")
+    suspend fun setPassword(@Body setPassword: SetPassword): Response<SetPassResponse>
+
 }
 
 class UserSignup internal constructor(
@@ -30,4 +34,15 @@ class OTPVerify internal constructor(
 
     @SerializedName("otp")
     val otp: String
+)
+
+class SetPassword internal constructor(
+    @SerializedName("user_id")
+    val usreId: String,
+
+    @SerializedName("password")
+    val password: String,
+    @SerializedName("set_password")
+    val set_password: String
+
 )
