@@ -12,6 +12,9 @@ class AppPreference @Inject constructor(private val sharedPreferences: SharedPre
     var mobile: String
         get() = getString(MOBILE)
         set(value) = setString(value, MOBILE)
+    var userId: String
+        get() = getString(USER_ID)
+        set(value) = setString(value, USER_ID)
     var password: String
         get() = getString(PASSWORD)
         set(value) = setString(value, PASSWORD)
@@ -51,6 +54,7 @@ class AppPreference @Inject constructor(private val sharedPreferences: SharedPre
         const val USER = "user"
         const val DEVICE_ID = "device_id"
         const val MOBILE = "mobile"
+        const val USER_ID = "user_id"
         const val PASSWORD = "password"
         const val LOGIN_COUNT = "login_count"
         const val IS_LOGIN_CHECK = "is_login_check"

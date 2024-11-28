@@ -8,28 +8,21 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.androiddev.astrohelpme.R
-import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
-import com.androiddev.astrohelpme.databinding.FragmentOtpVerifyBinding
+import com.androiddev.astrohelpme.data.response.SetPassResponse
+import com.androiddev.astrohelpme.databinding.FragmentSetPassBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.viewmodel.OtpVerifyViewModel
+import com.androiddev.astrohelpme.ui.viewmodel.SetPassViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
-class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragment_otp_verify) {
-    private val viewModel: OtpVerifyViewModel by viewModels()
+class SetPasswordFragment : BaseFragment<FragmentSetPassBinding>(R.layout.fragment_set_pass) {
+    private val viewModel: SetPassViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
-
-       // val userID = arguments?.getString("user_id")
-        val mobileNumber = arguments?.getString("mobile")
-
-
-       // viewModel.userId = userID.toString()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -39,7 +32,7 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
     }
 
     private fun subscriberObservers() {
-        viewModel.otpVerifyResponseObserver.observe(viewLifecycleOwner, Observer {
+        viewModel.setPassResponseObserver.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
                     Log.d("MYTAG", "subscriberObservers: progresssss")
@@ -49,7 +42,7 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
 
                     //  setVisibilityWithAlpha(true)
-                    onValidateRespone(it.data)
+                    onSetPassRespone(it.data)
                 }
 
                 is Resource.Failure -> {
@@ -61,12 +54,8 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
 
     }
 
-    private fun onValidateRespone(data: OtpVerifyResponse) {
-        if (data.message == "OTP verified successfully") {
-            findNavController().navigate(R.id.action_otpVerifyFragment_to_createPasswordFragment)
-        } else {
-            Toast.makeText(context, "OTP Verification Failed---" + data.message, Toast.LENGTH_SHORT)
-                .show()
-        }
+    private fun onSetPassRespone(data: SetPassResponse) {
+        Toast.makeText(context, data.message, Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_createPasswordFragment_to_getStartedFragment)
     }
 }

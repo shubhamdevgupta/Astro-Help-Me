@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/createPasswordFragment"
-        android:name="com.androiddev.astrohelpme.ui.fragment.auth.CreatePasswordFragment"
+        android:name="com.androiddev.astrohelpme.ui.fragment.auth.SetPasswordFragment"
         android:label="CreatePasswordFragment">
         <action
             android:id="@+id/action_createPasswordFragment_to_getStartedFragment"

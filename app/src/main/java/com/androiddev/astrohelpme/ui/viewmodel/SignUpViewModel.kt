@@ -41,12 +41,17 @@ class SignUpViewModel @Inject constructor(
                         authRepository.userSignUp(UserSignup(mobileNumber))
                     }
                 }
-                Log.d("MYTAG", "onSubmitClick: button clickedd" )
+                Log.d("MYTAG", "onSubmitClick: button clickedd")
                 _signupObserver.value = Resource.Success(response)
+                setUpData(response)
             } catch (e: Exception) {
                 _signupObserver.value = Resource.Failure(e)
             }
         }
+    }
+
+    private fun setUpData(response: SignupResponse) {
+        appPreference.userId = response.user_id.toString()
     }
 
     fun validateLoginInput(): Boolean {

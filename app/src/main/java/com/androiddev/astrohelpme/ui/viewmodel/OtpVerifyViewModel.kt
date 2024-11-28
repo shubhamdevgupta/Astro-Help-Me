@@ -25,6 +25,10 @@ class OtpVerifyViewModel @Inject constructor(
     var otp: String = AppConstants.EMPTY
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
 
+    init {
+        userId = appPreference.userId
+    }
+
 
     private val _otpVerifyResponse = MutableLiveData<Resource<OtpVerifyResponse>>()
     val otpVerifyResponseObserver: MutableLiveData<Resource<OtpVerifyResponse>>

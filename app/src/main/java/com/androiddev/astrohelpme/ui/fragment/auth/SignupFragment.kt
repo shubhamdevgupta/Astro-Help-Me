@@ -63,7 +63,7 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(R.layout.fragment_sig
 
             val bundle = Bundle().apply {
                 putString("user_id", userId)
-                putString("mobile",viewModel.mobileNumber)
+                putString("mobile", viewModel.mobileNumber)
             }
             findNavController().navigate(R.id.otpVerifyFragment, bundle)
 
