@@ -27,7 +27,7 @@ class SplashActivity @Inject constructor() : AppCompatActivity() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
-                    val loginIntent = Intent(this@SplashActivity, AuthActivity::class.java)
+                    val loginIntent = Intent(this@SplashActivity, DashboardActivity::class.java)
                     startActivity(loginIntent)
                     finish()
                 }
