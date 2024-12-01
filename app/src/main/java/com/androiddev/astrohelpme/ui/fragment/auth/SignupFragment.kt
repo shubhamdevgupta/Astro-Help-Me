@@ -3,6 +3,7 @@ package com.androiddev.astrohelpme.ui.fragment.auth
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -12,6 +13,8 @@ import com.androiddev.astrohelpme.databinding.FragmentSignupBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
 import com.androiddev.astrohelpme.ui.viewmodel.SignUpViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
+import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
+import com.androiddev.astrohelpme.utils.extns.makeToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,19 +41,23 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(R.layout.fragment_sig
         viewModel.signupResponseObserver.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
+                    viewModel.isLoading.value = true
                     Log.d("MYTAG", "subscriberObservers: progresssss")
                 }
 
                 is Resource.Success -> {
+                    viewModel.isLoading.value = false
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
 
-                    //  setVisibilityWithAlpha(true)
                     onSignUpResponse(it.data)
+                    Toast.makeText(context, "Your otp is " + it.data.otp, Toast.LENGTH_SHORT).show()
                 }
 
                 is Resource.Failure -> {
+                    viewModel.isLoading.value = false
                     Log.d("MYTAG", "subscriberObservers: " + it.exception)
-
+                    activity?.handleNetworkFailure(it.exception)
+                    activity?.makeToast(it.exception.message.toString())
                 }
             }
         })

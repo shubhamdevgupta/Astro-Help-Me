@@ -13,6 +13,8 @@ import com.androiddev.astrohelpme.databinding.FragmentSetPassBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
 import com.androiddev.astrohelpme.ui.viewmodel.SetPassViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
+import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
+import com.androiddev.astrohelpme.utils.extns.makeToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,19 +37,20 @@ class SetPasswordFragment : BaseFragment<FragmentSetPassBinding>(R.layout.fragme
         viewModel.setPassResponseObserver.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
+                    viewModel.isLoading.value = true
                     Log.d("MYTAG", "subscriberObservers: progresssss")
                 }
 
                 is Resource.Success -> {
+                    viewModel.isLoading.value = false
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
-
-                    //  setVisibilityWithAlpha(true)
                     onSetPassRespone(it.data)
                 }
 
                 is Resource.Failure -> {
-                    Log.d("MYTAG", "subscriberObservers: " + it.exception)
-
+                    viewModel.isLoading.value = false
+                    activity?.handleNetworkFailure(it.exception)
+                    activity?.makeToast(it.exception.message.toString())
                 }
             }
         })

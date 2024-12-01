@@ -528,15 +528,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="12dp"
-                    android:background="@color/white">
+                    android:background="@color/white"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -562,81 +563,101 @@
 
                 </androidx.cardview.widget.CardView>
 
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:gravity="center"
-                        android:text="Ask A \n Question"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Dhruv"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Ask A\n Question"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Brihat \n Horoscope"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Dhruv"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Brihat \n Horoscope"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
@@ -646,105 +667,277 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Numberology"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
 
-                <LinearLayout
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Numerology"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Astro Shop"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Astro Shop"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Magazine"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Magazine"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="KP System"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="KP System"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Lal Kitab"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Varshaphal"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Learn \n Astrology"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Porutham"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
@@ -754,105 +947,137 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Lal Kitab"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Festivals"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Varshaphal"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Miscellaneo\nus"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Learn \n Astrology"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Dasha"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_swastik" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_margin="4dp"
                         android:gravity="center"
-                        android:text="Porutham"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_swastik" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="2025"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
@@ -876,6 +1101,26 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/home_drawer" />
+        app:menu="@menu/home_drawer" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/white"
+                android:text="Logout"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

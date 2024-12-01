@@ -13,6 +13,8 @@ import com.androiddev.astrohelpme.databinding.FragmentOtpVerifyBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
 import com.androiddev.astrohelpme.ui.viewmodel.OtpVerifyViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
+import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
+import com.androiddev.astrohelpme.utils.extns.makeToast
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -24,12 +26,7 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
-
-       // val userID = arguments?.getString("user_id")
         val mobileNumber = arguments?.getString("mobile")
-
-
-       // viewModel.userId = userID.toString()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -42,19 +39,21 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
         viewModel.otpVerifyResponseObserver.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
+                    viewModel.isLoading.value = true
                     Log.d("MYTAG", "subscriberObservers: progresssss")
                 }
 
                 is Resource.Success -> {
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
-
-                    //  setVisibilityWithAlpha(true)
+                    viewModel.isLoading.value = false
                     onValidateRespone(it.data)
+                    Toast.makeText(context, it.data.message, Toast.LENGTH_SHORT).show()
                 }
 
                 is Resource.Failure -> {
-                    Log.d("MYTAG", "subscriberObservers: " + it.exception)
-
+                    viewModel.isLoading.value = false
+                    activity?.handleNetworkFailure(it.exception)
+                    activity?.makeToast(it.exception.message.toString())
                 }
             }
         })

@@ -24,6 +24,7 @@ class SignUpViewModel @Inject constructor(
 
     var mobileNumber: String = AppConstants.EMPTY
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
+    val isLoading = MutableLiveData(false) // Observable property for progress
 
     private val _signupObserver = MutableLiveData<Resource<SignupResponse>>()
     val signupResponseObserver: MutableLiveData<Resource<SignupResponse>>
@@ -32,6 +33,7 @@ class SignUpViewModel @Inject constructor(
 
     fun onSubmitClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
+        isLoading.value = true
         if (!validateLoginInput()) return@onSubmitClick
         _signupObserver.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
@@ -45,6 +47,7 @@ class SignUpViewModel @Inject constructor(
                 _signupObserver.value = Resource.Success(response)
                 setUpData(response)
             } catch (e: Exception) {
+                isLoading.value = false
                 _signupObserver.value = Resource.Failure(e)
             }
         }
@@ -52,6 +55,7 @@ class SignUpViewModel @Inject constructor(
 
     private fun setUpData(response: SignupResponse) {
         appPreference.userId = response.user_id.toString()
+        appPreference.mobile = mobileNumber
     }
 
     fun validateLoginInput(): Boolean {

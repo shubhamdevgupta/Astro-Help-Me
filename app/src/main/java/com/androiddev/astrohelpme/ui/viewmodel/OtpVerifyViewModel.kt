@@ -22,11 +22,14 @@ class OtpVerifyViewModel @Inject constructor(
     private val appPreference: AppPreference,
 ) : BaseViewModel() {
     var userId: String = AppConstants.EMPTY
+    var mobileNumer: String = AppConstants.EMPTY
     var otp: String = AppConstants.EMPTY
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
+    var isLoading = MutableLiveData(false)
 
     init {
         userId = appPreference.userId
+        mobileNumer = appPreference.mobile
     }
 
 
@@ -37,7 +40,6 @@ class OtpVerifyViewModel @Inject constructor(
     fun onNextClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
         _otpVerifyResponse.value = Resource.Loading<Nothing>()
-        Log.d("MYTAG", "onNextClick: " + userId + "    otp entered" + otp)
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
@@ -45,7 +47,6 @@ class OtpVerifyViewModel @Inject constructor(
                         authRepository.otpVerify(OTPVerify(userId, otp))
                     }
                 }
-                Log.d("MYTAG", "onSubmitClick: button clickedd" + userId)
                 _otpVerifyResponse.value = Resource.Success(response)
             } catch (e: Exception) {
                 _otpVerifyResponse.value = Resource.Failure(e)
