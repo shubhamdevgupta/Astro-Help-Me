@@ -25,6 +25,7 @@ class SetPassViewModel @Inject constructor(
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
     var password: String = AppConstants.EMPTY
     var setPassword: String = AppConstants.EMPTY
+    var isLoading = MutableLiveData(false)
 
     private val _setPassResponse = MutableLiveData<Resource<SetPassResponse>>()
     val setPassResponseObserver: MutableLiveData<Resource<SetPassResponse>>

@@ -4,36 +4,35 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.androiddev.astrohelpme.R
+import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.utils.extns.fullScreen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-
 @AndroidEntryPoint
 class SplashActivity @Inject constructor() : AppCompatActivity() {
+
+    @Inject
+    lateinit var appPreference: AppPreference // Inject AppPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        fullScreen()
-        delayAndLaunchLoginActivity()
+        fullScreen() // Makes the activity fullscreen
+        delayAndLaunchNextActivity()
     }
 
-    private fun delayAndLaunchLoginActivity() {
-        val timer: Thread = object : Thread() {
-            override fun run() {
-                try {
-                    sleep(2500)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                } finally {
-                    val loginIntent = Intent(this@SplashActivity, DashboardActivity::class.java)
-                    startActivity(loginIntent)
-                    finish()
-                }
+    private fun delayAndLaunchNextActivity() {
+        // Delay execution using Handler.postDelayed (efficient way to handle delays)
+        android.os.Handler(mainLooper).postDelayed({
+            val nextActivityIntent = if (appPreference.isLoggedIn()) {
+                Intent(this@SplashActivity, DashboardActivity::class.java)
+            } else {
+                // User is not logged in, navigate to AuthActivity
+                Intent(this@SplashActivity, AuthActivity::class.java)
             }
-        }
-        timer.start()
+            startActivity(nextActivityIntent)
+            finish() // Close SplashActivity
+        }, 2500) // Delay for 2.5 seconds
     }
-
 }

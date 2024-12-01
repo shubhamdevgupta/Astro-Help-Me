@@ -59,5 +59,13 @@ class AppPreference @Inject constructor(private val sharedPreferences: SharedPre
         const val LOGIN_COUNT = "login_count"
         const val IS_LOGIN_CHECK = "is_login_check"
         const val IS_TRANSACTION_API = "is_transaction_api"
+        private const val KEY_IS_LOGGED_IN = "isLoggedIn"
+    }
+    fun isLoggedIn(): Boolean {
+        return sharedPreferences.getBoolean(KEY_IS_LOGGED_IN, false)
+    }
+
+    fun setLoggedIn(isLoggedIn: Boolean) {
+        sharedPreferences.edit().putBoolean(KEY_IS_LOGGED_IN, isLoggedIn).apply()
     }
 }
