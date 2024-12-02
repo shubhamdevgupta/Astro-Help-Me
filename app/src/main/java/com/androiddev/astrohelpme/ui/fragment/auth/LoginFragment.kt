@@ -12,6 +12,7 @@ import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.data.response.LoginResponse
 import com.androiddev.astrohelpme.databinding.FragmentLoginBinding
 import com.androiddev.astrohelpme.ui.activity.DashboardActivity
+import com.androiddev.astrohelpme.ui.dialog.AppDialog
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
 import com.androiddev.astrohelpme.ui.viewmodel.LoginViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
@@ -54,7 +55,6 @@ class LoginFragment :
                 }
 
                 is Resource.Success -> {
-                    Log.d("MYTAG", "subscriberObservers: " + it.data)
                     viewModel.isLoading.value = false
                     OnSuccessResponse(it.data)
                 }
@@ -63,7 +63,6 @@ class LoginFragment :
                     viewModel.isLoading.value = false
                     activity?.handleNetworkFailure(it.exception)
                     activity?.makeToast(it.exception.message.toString())
-                    Log.d("MYTAG", "subscriberObservers: error " + it.exception)
                 }
             }
         })

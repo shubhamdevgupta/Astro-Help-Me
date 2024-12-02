@@ -59,7 +59,8 @@ class SetPasswordFragment : BaseFragment<FragmentSetPassBinding>(R.layout.fragme
     }
 
     private fun onSetPassRespone(data: SetPassResponse) {
-        Toast.makeText(context, data.message, Toast.LENGTH_SHORT).show()
-        findNavController().navigate(R.id.action_createPasswordFragment_to_getStartedFragment)
+        if (data.status_code == 200) {
+            findNavController().navigate(R.id.action_createPasswordFragment_to_getStartedFragment)
+        }
     }
 }
