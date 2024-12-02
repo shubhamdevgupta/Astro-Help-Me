@@ -26,18 +26,12 @@ class LoginViewModel @Inject constructor(
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
     var isLoading = MutableLiveData(false)
 
-    init {
-        mobileNumber = appPreference.mobile
-        password = appPreference.password
-    }
-
     private val _loginObserver = MutableLiveData<Resource<LoginResponse>>()
     val loginResponse: MutableLiveData<Resource<LoginResponse>>
         get() = _loginObserver
 
     fun onSubmitClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
-        if (!validateLoginInput()) return@onSubmitClick
         _loginObserver.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
             try {

@@ -20,8 +20,7 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/lineat_gradient">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,14 +81,13 @@
                     android:textColorHint="@color/white"
                     app:boxStrokeColor="@color/white"
                     app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white"
-                    app:prefixText="+91">
+                    app:hintTextColor="@color/white">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Password"
-                        android:inputType="number"
+                        android:inputType="textPassword"
                         android:maxLength="10"
                         android:text="@={viewModel.password}"
                         android:textColor="@color/white"
