@@ -37,11 +37,11 @@ class LoginViewModel @Inject constructor(
             try {
                 val response = withContext(Dispatchers.IO) {
                     apiRequest {
-                        authRepository.loginData(LoginData(mobileNumber, password))
+                        authRepository.loginData(LoginData(mobileNumber,password))
                     }
                 }
                 setLoginCheck(response)
-                Log.d("MYTAG", "onSubmitClick: " + response)
+                Log.d("MYTAG", "onSubmitClick: " + mobileNumber +"----"+password)
                 _loginObserver.value = Resource.Success(response)
             } catch (e: Exception) {
                 _loginObserver.value = Resource.Failure(e)

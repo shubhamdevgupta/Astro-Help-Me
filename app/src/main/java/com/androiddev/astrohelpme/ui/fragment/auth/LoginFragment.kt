@@ -63,6 +63,7 @@ class LoginFragment :
                     viewModel.isLoading.value = false
                     activity?.handleNetworkFailure(it.exception)
                     activity?.makeToast(it.exception.message.toString())
+                    Log.d("MYTAG", "subscriberObservers: error " + it.exception)
                 }
             }
         })

@@ -22,8 +22,8 @@ interface AuthService {
     @POST("register/set-password")
     suspend fun setPassword(@Body setPassword: SetPassword): Response<SetPassResponse>
 
-  @POST("login")
-    suspend fun apiLogin(@Body setPassword: LoginData): Response<LoginResponse>
+    @POST("login")
+    suspend fun apiLogin(@Body loginData: LoginData): Response<LoginResponse>
 }
 
 class UserSignup internal constructor(
@@ -34,8 +34,7 @@ class UserSignup internal constructor(
 class LoginData internal constructor(
     @SerializedName("phone_number")
     val phoneNumber: String,
-
-    @SerializedName("phone_number")
+    @SerializedName("password")
     val password: String
 )
 
