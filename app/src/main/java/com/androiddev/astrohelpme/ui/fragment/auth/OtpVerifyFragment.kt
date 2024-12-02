@@ -61,11 +61,8 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>(R.layout.fragme
     }
 
     private fun onValidateRespone(data: OtpVerifyResponse) {
-        if (data.message == "OTP verified successfully") {
+        if (data.status_code == 200) {
             findNavController().navigate(R.id.action_otpVerifyFragment_to_createPasswordFragment)
-        } else {
-            Toast.makeText(context, "OTP Verification Failed---" + data.message, Toast.LENGTH_SHORT)
-                .show()
         }
     }
 }

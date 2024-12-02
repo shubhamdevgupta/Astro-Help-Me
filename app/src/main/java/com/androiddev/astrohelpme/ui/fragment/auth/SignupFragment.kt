@@ -42,20 +42,16 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(R.layout.fragment_sig
             when (it) {
                 is Resource.Loading -> {
                     viewModel.isLoading.value = true
-                    Log.d("MYTAG", "subscriberObservers: progresssss")
                 }
 
                 is Resource.Success -> {
                     viewModel.isLoading.value = false
-                    Log.d("MYTAG", "subscriberObservers: " + it.data)
-
                     onSignUpResponse(it.data)
-                    Toast.makeText(context, "Your otp is " + it.data.otp, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Your otp is " + it.data.otp, Toast.LENGTH_LONG).show()
                 }
 
                 is Resource.Failure -> {
                     viewModel.isLoading.value = false
-                    Log.d("MYTAG", "subscriberObservers: " + it.exception)
                     activity?.handleNetworkFailure(it.exception)
                     activity?.makeToast(it.exception.message.toString())
                 }
@@ -65,7 +61,7 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(R.layout.fragment_sig
     }
 
     private fun onSignUpResponse(data: SignupResponse) {
-        if (data.message == "OTP sent successfully.") {
+        if (data.status_code == 200) {
             val userId = data.user_id.toString()
 
             val bundle = Bundle().apply {
