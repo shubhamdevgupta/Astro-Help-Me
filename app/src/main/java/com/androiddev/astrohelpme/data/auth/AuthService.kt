@@ -1,6 +1,7 @@
 package com.androiddev.astrohelpme.data.auth
 
 
+import com.androiddev.astrohelpme.data.response.LoginResponse
 import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
 import com.androiddev.astrohelpme.data.response.SetPassResponse
 import com.androiddev.astrohelpme.data.response.SignupResponse
@@ -21,11 +22,21 @@ interface AuthService {
     @POST("register/set-password")
     suspend fun setPassword(@Body setPassword: SetPassword): Response<SetPassResponse>
 
+  @POST("login")
+    suspend fun apiLogin(@Body setPassword: LoginData): Response<LoginResponse>
 }
 
 class UserSignup internal constructor(
     @SerializedName("mobile_number")
     val mobileNumber: String
+)
+
+class LoginData internal constructor(
+    @SerializedName("phone_number")
+    val phoneNumber: String,
+
+    @SerializedName("phone_number")
+    val password: String
 )
 
 class OTPVerify internal constructor(
