@@ -44,6 +44,7 @@ class SetPasswordFragment : BaseFragment<FragmentSetPassBinding>(R.layout.fragme
                 is Resource.Success -> {
                     viewModel.isLoading.value = false
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
+                    Toast.makeText(context, it.data.message, Toast.LENGTH_SHORT).show()
                     onSetPassRespone(it.data)
                 }
 

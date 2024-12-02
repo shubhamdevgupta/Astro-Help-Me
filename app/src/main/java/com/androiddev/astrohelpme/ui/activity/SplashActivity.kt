@@ -28,8 +28,7 @@ class SplashActivity @Inject constructor() : AppCompatActivity() {
             val nextActivityIntent = if (appPreference.isLoggedIn()) {
                 Intent(this@SplashActivity, DashboardActivity::class.java)
             } else {
-                // User is not logged in, navigate to AuthActivity
-                Intent(this@SplashActivity, DashboardActivity::class.java)
+                Intent(this@SplashActivity, AuthActivity::class.java)
             }
             startActivity(nextActivityIntent)
             finish() // Close SplashActivity
