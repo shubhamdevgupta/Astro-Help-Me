@@ -44,5 +44,9 @@
         android:id="@+id/getStartedFragment"
         android:name="com.androiddev.astrohelpme.ui.fragment.auth.GetStartedFragment"
         android:label="fragment_get_started"
-        tools:layout="@layout/fragment_get_started" />
+        tools:layout="@layout/fragment_get_started" >
+        <action
+            android:id="@+id/action_getStartedFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
 </navigation>

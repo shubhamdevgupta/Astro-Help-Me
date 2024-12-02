@@ -1,14 +1,13 @@
 package com.androiddev.astrohelpme.ui.fragment.auth
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.androiddev.astrohelpme.R
-import com.androiddev.astrohelpme.ui.activity.DashboardActivity
 
 class GetStartedFragment : Fragment() {
 
@@ -20,9 +19,7 @@ class GetStartedFragment : Fragment() {
 
         val btnGoToDashboard: Button = view.findViewById(R.id.btnStart)
         btnGoToDashboard.setOnClickListener {
-            val intent = Intent(requireContext(), DashboardActivity::class.java)
-            startActivity(intent)
-            requireActivity().finish()
+            findNavController().navigate(R.id.action_getStartedFragment_to_signInFragment)
         }
         return view
     }

@@ -13,7 +13,7 @@ import javax.inject.Inject
 class SplashActivity @Inject constructor() : AppCompatActivity() {
 
     @Inject
-    lateinit var appPreference: AppPreference // Inject AppPreference
+    lateinit var appPreference: AppPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

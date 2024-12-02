@@ -44,4 +44,11 @@
     <color name="zxing_transparent">#00000000</color>
     <color name="zxing_viewfinder_mask">#86000000</color>
 
+    <color name="error_transparent_red">#80FF0000</color>
+    <color name="error_transparent_yellow">#80FFC107</color>
+    <color name="error_transparent_purple">#80501E71</color>
+    <color name="error_transparent_orange">#80F07902</color>
+
+
+
 </resources>

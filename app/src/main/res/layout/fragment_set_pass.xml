@@ -78,6 +78,8 @@
                         android:layout_margin="12dp"
                         android:textColorHint="@color/white"
                         app:boxStrokeColor="@color/white"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/white"
                         app:hintTextColor="@color/white">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -99,6 +101,19 @@
                         android:onClick="@{viewModel::onSubmitClick}"
                         android:text="Submit"
                         android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/errorMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@{viewModel.errorMsgObserver}"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="@{viewModel.errorMsgObserver != null ? View.VISIBLE : View.GONE}" />
 
                 </LinearLayout>
 

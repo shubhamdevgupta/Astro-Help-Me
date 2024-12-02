@@ -39,6 +39,7 @@ class OtpVerifyViewModel @Inject constructor(
 
     fun onNextClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
+        if (!validateLoginInput()) return@onNextClick
         _otpVerifyResponse.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
             try {
@@ -59,7 +60,7 @@ class OtpVerifyViewModel @Inject constructor(
             if (userId.isNotEmpty()) {
                 return true
             } else "user id not found"
-        } else "mobile number not found"
+        } else "otp is not valid or empty"
         errorMsgObserver.value = message
         Log.d("MYTAG", "validateLoginInput: " + errorMsgObserver.value)
         return false

@@ -76,6 +76,19 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/errorMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:gravity="center"
+                    android:text="@{viewModel.errorMsgObserver}"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:visibility="@{viewModel.errorMsgObserver != null ? View.VISIBLE : View.GONE}" />
+
+                <TextView
                     android:id="@+id/tvLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

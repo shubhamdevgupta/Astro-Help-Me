@@ -22,9 +22,10 @@ class SetPassViewModel @Inject constructor(
     private val appPreference: AppPreference
 ) : BaseViewModel() {
 
-    var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
     var password: String = AppConstants.EMPTY
     var setPassword: String = AppConstants.EMPTY
+
+    var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
     var isLoading = MutableLiveData(false)
 
     private val _setPassResponse = MutableLiveData<Resource<SetPassResponse>>()
@@ -33,6 +34,7 @@ class SetPassViewModel @Inject constructor(
 
     fun onSubmitClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
+        if (!validatePasswordInput()) return@onSubmitClick
         _setPassResponse.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
             try {
@@ -54,5 +56,28 @@ class SetPassViewModel @Inject constructor(
             }
         }
     }
+
+    fun validatePasswordInput(): Boolean {
+        val passwordRegex = "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@\$!%*?&])[A-Za-z\\d@\$!%*?&]{8,}$"
+        val message = when {
+            password.isEmpty() || setPassword.isEmpty() -> {
+                "Password fields cannot be empty."
+            }
+            !password.matches(passwordRegex.toRegex()) -> {
+                "Password must be at least 8 characters long, contain one letter, one number, and one special character."
+            }
+            password != setPassword -> {
+                "Passwords do not match."
+            }
+
+            else -> {
+                return true // Validation passed
+            }
+        }
+        errorMsgObserver.value = message
+        Log.d("MYTAG", "validatePasswordInput: $message")
+        return false // Validation failed
+    }
+
 
 }

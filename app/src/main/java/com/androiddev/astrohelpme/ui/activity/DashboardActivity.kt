@@ -7,13 +7,20 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.R
+import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.databinding.ActivityDashboardBinding
 import com.androiddev.astrohelpme.ui.fragment.DashboardFragment
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class DashboardActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class DashboardActivity @Inject constructor(): AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var drawerLayout: DrawerLayout
+
+    @Inject
+    lateinit var appPreference: AppPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,13 +30,14 @@ class DashboardActivity : AppCompatActivity() {
         // Initialize DrawerLayout
         drawerLayout = binding.drawerLayout
 
+
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> loadFragment(DashboardFragment())
-                R.id.nav_view -> loadFragment(DashboardFragment()) // Replace with another fragment as needed
-                R.id.nav_about_us -> logout()
+                R.id.nav_view -> loadFragment(DashboardFragment())
+                R.id.logout -> logout()
             }
-            drawerLayout.closeDrawer(GravityCompat.START) // Close the drawer after selection
+            drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
     }
@@ -37,15 +45,12 @@ class DashboardActivity : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
     }
 
-    /**
-     * Perform logout and redirect to AuthActivity
-     */
+
     private fun logout() {
-        // Clear any saved preferences or session data if applicable
-        // Redirect to AuthActivity
         val intent = Intent(this, AuthActivity::class.java)
+        appPreference.setLoggedIn(false)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
-        finish() // Finish DashboardActivity
+        finish()
     }
 }

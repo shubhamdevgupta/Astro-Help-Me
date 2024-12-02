@@ -33,8 +33,8 @@ class SignUpViewModel @Inject constructor(
 
     fun onSubmitClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
-        isLoading.value = true
         if (!validateLoginInput()) return@onSubmitClick
+        isLoading.value = true
         _signupObserver.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
             try {
@@ -63,7 +63,6 @@ class SignUpViewModel @Inject constructor(
             return true
         } else "Please Enter Valid Mobile Number"
         errorMsgObserver.value = message
-        Log.d("MYTAG", "validateLoginInput: " + errorMsgObserver.value)
         return false
     }
 

@@ -23,6 +23,7 @@ class LoginViewModel @Inject constructor(
 ) : BaseViewModel() {
     var mobileNumber = AppConstants.EMPTY
     var password = AppConstants.EMPTY
+
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
     var isLoading = MutableLiveData(false)
 
@@ -32,6 +33,7 @@ class LoginViewModel @Inject constructor(
 
     fun onSubmitClick(view: View) {
         errorMsgObserver.value = AppConstants.EMPTY
+        if (!validateLoginInput()) return@onSubmitClick
         _loginObserver.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
             try {
@@ -52,9 +54,13 @@ class LoginViewModel @Inject constructor(
     private fun setLoginCheck(response: LoginResponse) {
 
     }
-
-    private fun validateLoginInput(): Boolean {
-        return true
+    fun validateLoginInput(): Boolean {
+        val message = if (mobileNumber.isNotEmpty() && mobileNumber.length == 10) {
+            if (password.isNotEmpty()) {
+                return true
+            } else "Please Enter Your Password"
+        } else "Please Enter Valid Mobile NUmber"
+        errorMsgObserver.value = message
+        return false
     }
-
 }
