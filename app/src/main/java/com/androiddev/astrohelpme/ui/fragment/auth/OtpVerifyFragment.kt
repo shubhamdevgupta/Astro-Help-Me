@@ -11,7 +11,7 @@ import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
 import com.androiddev.astrohelpme.databinding.FragmentOtpVerifyBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.viewmodel.OtpVerifyViewModel
+import com.androiddev.astrohelpme.ui.viewmodel.auth.OtpVerifyViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
 import com.androiddev.astrohelpme.utils.extns.makeToast

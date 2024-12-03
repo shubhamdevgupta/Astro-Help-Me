@@ -5,32 +5,32 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/connect"
+        android:id="@+id/nav_chart"
         android:title="open chart" />
 
     <item
-        android:id="@+id/nav_about_us"
+        android:id="@+id/nav_astrologer"
         android:title="Astrologer Registration" />
     <item
-        android:id="@+id/my_account"
+        android:id="@+id/nav_myaccount"
         android:title="My Account" />
     <item
-        android:id="@+id/change_language"
+        android:id="@+id/nav_changelanguage"
         android:title="Change Language" />
     <item
-        android:id="@+id/rate_app"
+        android:id="@+id/nav_rateapp"
         android:title="Rate App" />
     <item
-        android:id="@+id/feedback"
+        android:id="@+id/nav_feedback"
         android:title="Feedback" />
     <item
-        android:id="@+id/aboutus"
+        android:id="@+id/nav_aboutus"
         android:title="About Us" />
     <item
-        android:id="@+id/deleteAccount"
+        android:id="@+id/nav_delete"
         android:title="Delete My Account" />
     <item
-        android:id="@+id/logout"
+        android:id="@+id/nav_logout"
         android:title="Logout" />
 
 

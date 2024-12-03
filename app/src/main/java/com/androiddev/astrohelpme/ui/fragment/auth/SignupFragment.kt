@@ -1,7 +1,6 @@
 package com.androiddev.astrohelpme.ui.fragment.auth
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
@@ -11,7 +10,7 @@ import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.response.SignupResponse
 import com.androiddev.astrohelpme.databinding.FragmentSignupBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.viewmodel.SignUpViewModel
+import com.androiddev.astrohelpme.ui.viewmodel.auth.SignUpViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
 import com.androiddev.astrohelpme.utils.extns.makeToast

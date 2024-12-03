@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.androiddev.astrohelpme.ui.viewmodel.SetPassViewModel" />
+            type="com.androiddev.astrohelpme.ui.viewmodel.auth.SetPassViewModel" />
     </data>
 
     <FrameLayout
