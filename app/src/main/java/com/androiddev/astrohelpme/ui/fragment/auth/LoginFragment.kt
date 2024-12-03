@@ -2,7 +2,6 @@ package com.androiddev.astrohelpme.ui.fragment.auth
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -12,9 +11,8 @@ import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.data.response.LoginResponse
 import com.androiddev.astrohelpme.databinding.FragmentLoginBinding
 import com.androiddev.astrohelpme.ui.activity.DashboardActivity
-import com.androiddev.astrohelpme.ui.dialog.AppDialog
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.viewmodel.LoginViewModel
+import com.androiddev.astrohelpme.ui.viewmodel.auth.LoginViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
 import com.androiddev.astrohelpme.utils.extns.makeToast

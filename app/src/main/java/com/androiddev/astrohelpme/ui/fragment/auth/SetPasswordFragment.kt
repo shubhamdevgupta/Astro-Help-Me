@@ -11,7 +11,7 @@ import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.response.SetPassResponse
 import com.androiddev.astrohelpme.databinding.FragmentSetPassBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.viewmodel.SetPassViewModel
+import com.androiddev.astrohelpme.ui.viewmodel.auth.SetPassViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
 import com.androiddev.astrohelpme.utils.extns.makeToast

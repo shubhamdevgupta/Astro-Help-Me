@@ -9,12 +9,13 @@ import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.databinding.ActivityDashboardBinding
+import com.androiddev.astrohelpme.ui.fragment.astro_register.AstrologerRegistrationFragment
 import com.androiddev.astrohelpme.ui.fragment.DashboardFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class DashboardActivity @Inject constructor(): AppCompatActivity() {
+class DashboardActivity @Inject constructor() : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var drawerLayout: DrawerLayout
@@ -29,13 +30,15 @@ class DashboardActivity @Inject constructor(): AppCompatActivity() {
 
         // Initialize DrawerLayout
         drawerLayout = binding.drawerLayout
-
+        if (savedInstanceState == null) {
+            loadFragment(DashboardFragment())
+        }
 
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> loadFragment(DashboardFragment())
-                R.id.nav_view -> loadFragment(DashboardFragment())
-                R.id.logout -> logout()
+                R.id.nav_astrologer -> loadFragment(AstrologerRegistrationFragment())
+                R.id.nav_logout -> logout()
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true
@@ -43,6 +46,9 @@ class DashboardActivity @Inject constructor(): AppCompatActivity() {
     }
 
     private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_view, fragment)
+            .commit()
     }
 
 
