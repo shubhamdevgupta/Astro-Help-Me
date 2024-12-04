@@ -27,10 +27,7 @@ interface AuthService {
     @POST("login")
     suspend fun apiLogin(@Body loginData: LoginData): Response<LoginResponse>
 
-    @POST("astro_details")
-    suspend fun getAstroDetails(
-        @Body request: AstroDetailsRequest
-    ): Response<KundliResponse>
+
 }
 
 class UserSignup internal constructor(

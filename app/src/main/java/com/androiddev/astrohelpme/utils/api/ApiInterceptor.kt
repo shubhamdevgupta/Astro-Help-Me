@@ -44,7 +44,7 @@ class ApiInterceptor @Inject constructor(
             .addHeader("Accept", "application/json")
             .header(
                 "Authorization",
-                Credentials.basic("635294", "1a32b66fe5165c694607156bdb36a6c0793150ea")
+                Credentials.basic("635294", "034da42232b5b34a57b7e6e27e031473622744d4")
             )
             .build()
         return request

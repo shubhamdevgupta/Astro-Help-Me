@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/nav_astrologer"
-        android:title="Astrologer Registration" />
+        android:title="Show Kundli" />
     <item
         android:id="@+id/nav_myaccount"
         android:title="My Account" />

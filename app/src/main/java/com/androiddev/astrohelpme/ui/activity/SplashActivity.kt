@@ -18,12 +18,11 @@ class SplashActivity @Inject constructor() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        fullScreen() // Makes the activity fullscreen
+        fullScreen()
         delayAndLaunchNextActivity()
     }
 
     private fun delayAndLaunchNextActivity() {
-        // Delay execution using Handler.postDelayed (efficient way to handle delays)
         android.os.Handler(mainLooper).postDelayed({
             val nextActivityIntent = if (appPreference.isLoggedIn()) {
                 Intent(this@SplashActivity, DashboardActivity::class.java)
@@ -31,7 +30,7 @@ class SplashActivity @Inject constructor() : AppCompatActivity() {
                 Intent(this@SplashActivity, AuthActivity::class.java)
             }
             startActivity(nextActivityIntent)
-            finish() // Close SplashActivity
-        }, 2500) // Delay for 2.5 seconds
+            finish()
+        }, 2500)
     }
 }

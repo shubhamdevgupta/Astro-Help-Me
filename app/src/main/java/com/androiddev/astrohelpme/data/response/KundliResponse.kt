@@ -1,5 +1,7 @@
 package com.androiddev.astrohelpme.data.response
 
+import java.io.Serializable
+
 data class KundliResponse(
     val Charan: Int,
     val Gan: String,
@@ -20,4 +22,4 @@ data class KundliResponse(
     val sign: String,
     val tatva: String,
     val yunja: String
-)
+): Serializable

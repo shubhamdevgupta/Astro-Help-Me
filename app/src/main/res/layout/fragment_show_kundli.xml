@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.androiddev.astrohelpme.ui.viewmodel.astro_register.AstroRegisterViewModel" />
+            type="com.androiddev.astrohelpme.ui.viewmodel.show_kundli.ShowKundliViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Astrologer Registration"
+                    android:text="Show Kundli"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 

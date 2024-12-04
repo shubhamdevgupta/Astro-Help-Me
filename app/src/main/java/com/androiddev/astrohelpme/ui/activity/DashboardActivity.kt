@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.databinding.ActivityDashboardBinding
-import com.androiddev.astrohelpme.ui.fragment.astro_register.AstrologerRegistrationFragment
 import com.androiddev.astrohelpme.ui.fragment.DashboardFragment
+import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFragment
+import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -33,11 +34,10 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
         if (savedInstanceState == null) {
             loadFragment(DashboardFragment())
         }
-
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> loadFragment(DashboardFragment())
-                R.id.nav_astrologer -> loadFragment(AstrologerRegistrationFragment())
+                R.id.nav_astrologer -> loadFragment(ShowKundliDataFragment())
                 R.id.nav_logout -> logout()
             }
             drawerLayout.closeDrawer(GravityCompat.START)
@@ -48,6 +48,7 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container_view, fragment)
+            .addToBackStack(null)
             .commit()
     }
 
@@ -58,5 +59,23 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
         finish()
+    }
+
+    override fun onBackPressed() {
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view)
+
+        when (currentFragment) {
+            is ShowKundliDataFragment -> {
+                supportFragmentManager.popBackStack()
+            }
+
+            is MatchMakingRequestFragment -> {
+                supportFragmentManager.popBackStack()
+            }
+
+            else -> {
+                super.onBackPressed()
+            }
+        }
     }
 }

@@ -1,6 +1,5 @@
 package com.androiddev.astrohelpme.data.repository
 
-import com.androiddev.astrohelpme.data.auth.AstroDetailsRequest
 import com.androiddev.astrohelpme.data.auth.AuthService
 import com.androiddev.astrohelpme.data.auth.LoginData
 import com.androiddev.astrohelpme.data.auth.OTPVerify
@@ -18,7 +17,6 @@ class AuthRepository @Inject constructor(private val authService: AuthService) {
     suspend fun setPassword(setPassword: SetPassword) = authService.setPassword(setPassword)
 
     suspend fun loginData(loginData: LoginData) = authService.apiLogin(loginData)
-    suspend fun getAstroDetails( astroDetailsRequest: AstroDetailsRequest) =
-        authService.getAstroDetails(astroDetailsRequest)
+
 
 }

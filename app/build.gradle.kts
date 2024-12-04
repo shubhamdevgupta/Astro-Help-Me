@@ -101,4 +101,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
     implementation("com.karumi:dexter:5.0.0")
+
+    implementation("com.sendbird.sdk:uikit:3.+")
+
 }

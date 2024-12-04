@@ -1,0 +1,128 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Male Section -->
+        <TextView
+            android:id="@+id/tv_male_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Male Manglik Details"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_male_manglik_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manglik Status: "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_male_present_rule_aspect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Based on Aspect:"
+            android:textStyle="bold" />
+
+        <!-- Add dynamic TextViews for each aspect -->
+
+        <TextView
+            android:id="@+id/tv_male_present_rule_house"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Based on House:"
+            android:textStyle="bold" />
+
+        <!-- Add dynamic TextViews for each house -->
+
+        <TextView
+            android:id="@+id/tv_male_manglik_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Manglik Report:" />
+
+        <!-- Female Section -->
+        <TextView
+            android:id="@+id/tv_female_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Female Manglik Details"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_female_manglik_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manglik Status: "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_female_present_rule_aspect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Based on Aspect:"
+            android:textStyle="bold" />
+
+        <!-- Add dynamic TextViews for each aspect -->
+
+        <TextView
+            android:id="@+id/tv_female_present_rule_house"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Based on House:"
+            android:textStyle="bold" />
+
+        <!-- Add dynamic TextViews for each house -->
+
+        <TextView
+            android:id="@+id/tv_female_manglik_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Manglik Report:" />
+
+        <!-- Conclusion Section -->
+        <TextView
+            android:id="@+id/tv_conclusion_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Conclusion"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_conclusion_match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Match: "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_conclusion_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Report: " />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,27 +1,27 @@
-package com.androiddev.astrohelpme.ui.fragment.astro_register
+package com.androiddev.astrohelpme.ui.fragment.show_kundli
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.androiddev.astrohelpme.R
-import com.androiddev.astrohelpme.databinding.FragmentAstrologerRegistrationBinding
+import com.androiddev.astrohelpme.data.response.KundliResponse
+import com.androiddev.astrohelpme.databinding.FragmentShowKundliBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.viewmodel.astro_register.AstroRegisterViewModel
-import com.androiddev.astrohelpme.ui.viewmodel.auth.OtpVerifyViewModel
+import com.androiddev.astrohelpme.ui.viewmodel.show_kundli.ShowKundliViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
 import com.androiddev.astrohelpme.utils.extns.makeToast
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
+
 @AndroidEntryPoint
-class AstrologerRegistrationFragment :
-    BaseFragment<FragmentAstrologerRegistrationBinding>(R.layout.fragment_astrologer_registration) {
-    private val viewModel: AstroRegisterViewModel by viewModels()
+class ShowKundliDataFragment :
+    BaseFragment<FragmentShowKundliBinding>(R.layout.fragment_show_kundli) {
+    private val viewModel: ShowKundliViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,6 +38,10 @@ class AstrologerRegistrationFragment :
             DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
                 binding.etDateOfBirth.setText("$selectedDay/${selectedMonth + 1}/$selectedYear")
             }, year, month, day).show()
+
+            viewModel.day = day
+            viewModel.month = month
+            viewModel.year = year
         }
 
         binding.etTimeOfBirth.setOnClickListener {
@@ -48,7 +52,12 @@ class AstrologerRegistrationFragment :
             TimePickerDialog(requireContext(), { _, selectedHour, selectedMinute ->
                 binding.etTimeOfBirth.setText("$selectedHour:$selectedMinute")
             }, hour, minute, true).show()
+
+            viewModel.hour = hour
+            viewModel.min = minute
         }
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -65,6 +74,7 @@ class AstrologerRegistrationFragment :
 
                 is Resource.Success -> {
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
+                    showKundliFragment(it.data)
                 }
 
                 is Resource.Failure -> {
@@ -75,5 +85,23 @@ class AstrologerRegistrationFragment :
             }
         })
     }
+
+    private fun showKundliFragment(data: KundliResponse) {
+
+        val bundle = Bundle().apply {
+            putSerializable("kundliresponse", data)
+        }
+        val kundliDataFragment = KundliDataRequestFragment().apply {
+            arguments = bundle
+        }
+
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_view, kundliDataFragment)
+            .addToBackStack(null)
+            .commit()
+
+    }
+
+
 
 }

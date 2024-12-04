@@ -6,16 +6,42 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.R
+import com.androiddev.astrohelpme.databinding.FragmentDashboardBinding
+import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFragment
+import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
 
 
 class DashboardFragment : Fragment() {
 
+    private var _binding: FragmentDashboardBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.icKundli.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_view, ShowKundliDataFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        binding.icMatchMaking.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_view, MatchMakingRequestFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+
     }
 
 }

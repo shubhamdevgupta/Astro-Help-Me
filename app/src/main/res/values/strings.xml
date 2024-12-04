@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Astro help me</string>
 
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+
+
     <string name="keep_me_login">Keep Me Login</string>
     <string name="submit">Submit</string>
     <string name="rooted_device_message">Sorry! your device isn\'t passing Tramo Norton\'s security checks.This may be because your device is rooted,or is running an un certified or custom OS build. As a result, Tramo Norton can\'t confirm that device meets Tramo Norton\'s security standards.</string>

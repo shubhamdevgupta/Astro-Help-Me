@@ -20,6 +20,13 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_slideicon" />
+
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -96,6 +103,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/ic_kundli"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -120,6 +128,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ic_matchMaking"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
