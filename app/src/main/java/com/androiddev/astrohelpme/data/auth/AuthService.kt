@@ -1,6 +1,7 @@
 package com.androiddev.astrohelpme.data.auth
 
 
+import com.androiddev.astrohelpme.data.response.KundliResponse
 import com.androiddev.astrohelpme.data.response.LoginResponse
 import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
 import com.androiddev.astrohelpme.data.response.SetPassResponse
@@ -8,6 +9,7 @@ import com.androiddev.astrohelpme.data.response.SignupResponse
 import com.google.gson.annotations.SerializedName
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 
@@ -24,6 +26,11 @@ interface AuthService {
 
     @POST("login")
     suspend fun apiLogin(@Body loginData: LoginData): Response<LoginResponse>
+
+    @POST("astro_details")
+    suspend fun getAstroDetails(
+        @Body request: AstroDetailsRequest
+    ): Response<KundliResponse>
 }
 
 class UserSignup internal constructor(

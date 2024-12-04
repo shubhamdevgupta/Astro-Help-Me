@@ -44,7 +44,7 @@ class ApiInterceptor @Inject constructor(
             .addHeader("Accept", "application/json")
             .header(
                 "Authorization",
-                Credentials.basic("onetouchexpress3", "6742729ea782d39d327b72b8c1a989b46c90b584")
+                Credentials.basic("635294", "1a32b66fe5165c694607156bdb36a6c0793150ea")
             )
             .build()
         return request
