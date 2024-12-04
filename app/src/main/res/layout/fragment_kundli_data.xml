@@ -11,15 +11,27 @@
         android:orientation="vertical">
 
         <!-- Title -->
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingBottom="16dp"
-            android:text="Astrology Kundli Details"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:text="Astrology Kundli Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/icSqaa"
+                android:src="@drawable/ic_home"
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+        </LinearLayout>
 
         <!-- Key-Value Pairs -->
         <LinearLayout
@@ -136,7 +148,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                    android:id="@+id/tvYoniValue"
+                android:id="@+id/tvYoniValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

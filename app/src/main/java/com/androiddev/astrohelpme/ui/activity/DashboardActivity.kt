@@ -11,6 +11,7 @@ import com.androiddev.astrohelpme.data.local.AppPreference
 import com.androiddev.astrohelpme.databinding.ActivityDashboardBinding
 import com.androiddev.astrohelpme.ui.fragment.DashboardFragment
 import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFragment
+import com.androiddev.astrohelpme.ui.fragment.register_astrologer.RegisterAstrologerFragment
 import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -38,6 +39,7 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.nav_home -> loadFragment(DashboardFragment())
                 R.id.nav_astrologer -> loadFragment(ShowKundliDataFragment())
+                R.id.nav_registerastrologer -> loadFragment(RegisterAstrologerFragment())
                 R.id.nav_logout -> logout()
             }
             drawerLayout.closeDrawer(GravityCompat.START)

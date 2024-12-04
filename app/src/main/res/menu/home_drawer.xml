@@ -5,18 +5,14 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/nav_chart"
-        android:title="open chart" />
-
-    <item
         android:id="@+id/nav_astrologer"
         android:title="Show Kundli" />
     <item
+        android:id="@+id/nav_registerastrologer"
+        android:title="Register Astrologer" />
+    <item
         android:id="@+id/nav_myaccount"
         android:title="My Account" />
-    <item
-        android:id="@+id/nav_changelanguage"
-        android:title="Change Language" />
     <item
         android:id="@+id/nav_rateapp"
         android:title="Rate App" />
@@ -29,6 +25,10 @@
     <item
         android:id="@+id/nav_delete"
         android:title="Delete My Account" />
+    <item
+        android:id="@+id/nav_changelanguage"
+        android:title="Change Language" />
+
     <item
         android:id="@+id/nav_logout"
         android:title="Logout" />

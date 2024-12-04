@@ -23,6 +23,7 @@ class ShowKundliViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
+    var isLoading = MutableLiveData(false)
     var day = 0
     var month = 0
     var year = 1111
@@ -38,6 +39,7 @@ class ShowKundliViewModel @Inject constructor(
 
 
     fun onNextClick(view: View) {
+        if (!validateLoginInput()) return@onNextClick
         errorMsgObserver.value = AppConstants.EMPTY
         _kundliResponse.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
@@ -63,6 +65,17 @@ class ShowKundliViewModel @Inject constructor(
                 _kundliResponse.value = Resource.Failure(e)
             }
         }
+    }
+
+    private fun validateLoginInput(): Boolean {
+        val message =
+            if (day != 0 && month != 0 && year != 0) {
+                if (min != 0 && hour != 0) {
+                    return true
+                } else "Please Select Valid Time of Birth"
+            } else "Please Select Valid Date of Birth"
+        errorMsgObserver.value = message
+        return false
     }
 
 }
