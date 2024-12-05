@@ -1,5 +1,6 @@
 package com.androiddev.astrohelpme.ui.fragment.show_kundli
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.data.response.KundliResponse
 import com.androiddev.astrohelpme.databinding.FragmentKundliDataBinding
+import com.androiddev.astrohelpme.ui.activity.AuthActivity
+import com.androiddev.astrohelpme.ui.activity.DashboardActivity
 
 
 class KundliDataRequestFragment : Fragment() {
@@ -39,6 +42,12 @@ class KundliDataRequestFragment : Fragment() {
         binding.tvTithiValue.text = kundliResponse?.Tithi
         binding.tvnameAlphabetValue.text = kundliResponse?.name_alphabet
         binding.tvpayaValue.text = kundliResponse?.paya
+
+        binding.icSqaa.setOnClickListener {
+            val intent = Intent(requireActivity(), DashboardActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+        }
     }
 
     override fun onCreateView(

@@ -48,13 +48,17 @@ class ShowKundliDataFragment :
             val calendar = Calendar.getInstance()
             val hour = calendar.get(Calendar.HOUR_OF_DAY)
             val minute = calendar.get(Calendar.MINUTE)
-
             TimePickerDialog(requireContext(), { _, selectedHour, selectedMinute ->
-                binding.etTimeOfBirth.setText("$selectedHour:$selectedMinute")
-            }, hour, minute, true).show()
+                // Update the EditText with the selected time
+                binding.etTimeOfBirth.setText(String.format("%02d:%02d", selectedHour, selectedMinute))
 
-            viewModel.hour = hour
-            viewModel.min = minute
+                // Log the selected time
+                Log.d("MYTAG", "onViewCreated: time after select $selectedHour:$selectedMinute")
+
+                // Update ViewModel with the selected time
+                viewModel.hour = selectedHour
+                viewModel.min = selectedMinute
+            }, hour, minute, true).show()
         }
 
 
@@ -69,16 +73,16 @@ class ShowKundliDataFragment :
         viewModel.kundliResponseObserver.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
-                    Log.d("MYTAG", "subscriberObservers: progresssss")
+                    viewModel.isLoading.value = true
                 }
 
                 is Resource.Success -> {
-                    Log.d("MYTAG", "subscriberObservers: " + it.data)
+                    viewModel.isLoading.value = false
                     showKundliFragment(it.data)
                 }
 
                 is Resource.Failure -> {
-                    Log.d("MYTAG", "subscriberObservers: " + it.exception)
+                    viewModel.isLoading.value = false
                     activity?.handleNetworkFailure(it.exception)
                     activity?.makeToast(it.exception.message.toString())
                 }

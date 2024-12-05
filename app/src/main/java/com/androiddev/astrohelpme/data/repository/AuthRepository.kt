@@ -3,6 +3,7 @@ package com.androiddev.astrohelpme.data.repository
 import com.androiddev.astrohelpme.data.auth.AuthService
 import com.androiddev.astrohelpme.data.auth.LoginData
 import com.androiddev.astrohelpme.data.auth.OTPVerify
+import com.androiddev.astrohelpme.data.auth.RegisterAstro
 import com.androiddev.astrohelpme.data.auth.SetPassword
 import com.androiddev.astrohelpme.data.auth.UserSignup
 import javax.inject.Inject
@@ -18,5 +19,7 @@ class AuthRepository @Inject constructor(private val authService: AuthService) {
 
     suspend fun loginData(loginData: LoginData) = authService.apiLogin(loginData)
 
+    suspend fun registerAstro(registerAstro: RegisterAstro) =
+        authService.registerAstro(registerAstro)
 
 }

@@ -12,314 +12,333 @@
             type="com.androiddev.astrohelpme.ui.viewmodel.matchmaking.MatchMakingiViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/lineat_gradient"
-        android:padding="12dp">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:background="@drawable/lineat_gradient"
+            android:padding="12dp">
 
-            <!-- Header -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/baseline_arrow_back_24" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Match Making"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-            <!-- Form Content -->
-            <LinearLayout
-                android:id="@+id/llMaleLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Name -->
-                <com.google.android.material.textfield.TextInputLayout
+                <!-- Header -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Enter Male Name"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Gender -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Gender"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/white"
-                        android:checked="true"
-                        android:enabled="true"
-                        android:text="Male"
-                        android:textColor="@color/white" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/baseline_arrow_back_24" />
 
-                    <RadioButton
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/white"
-                        android:checked="false"
-                        android:enabled="false"
-                        android:text="Female"
-                        android:textColor="@color/white" />
-                </RadioGroup>
-
-                <!-- Date of Birth -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_date_of_birth_male"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:focusable="false"
-                        android:hint="Date of Birth Male"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:gravity="center"
+                        android:text="Match Making"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
 
-                <!-- Time of Birth -->
-                <com.google.android.material.textfield.TextInputLayout
+                </LinearLayout>
+
+                <!-- Form Content -->
+                <LinearLayout
+                    android:id="@+id/llMaleLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
+                    android:visibility="visible"
+                    android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_time_of_birth_male"
+                    <!-- Name -->
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:focusable="false"
-                        android:hint="Time of Birth Male"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
 
-                <!-- Place of Birth -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Male Name"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <!-- Gender -->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Place of Birth Male"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_marginTop="12dp"
+                        android:text="Gender"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llFeMaleLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <!-- Name -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
-
-                    <com.google.android.material.textfield.TextInputEditText
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Female Name"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
 
-                <!-- Gender -->
-                <TextView
+                        <RadioButton
+                            android:id="@+id/rbMale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:enabled="true"
+                            android:checked="true"
+                            android:buttonTint="@color/white"
+                            android:text="Male"
+                            android:textColor="@color/white" />
+
+                    </RadioGroup>
+
+                    <!-- Date of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_date_of_birth_male"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Date of Birth Male"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Time of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_time_of_birth_male"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Time of Birth Male"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Place of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Place of Birth Male"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFeMaleLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Gender"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                <RadioGroup
+                    <!-- Name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Female Name"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Gender -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Gender"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:enabled="true"
+                            android:checked="true"
+                            android:buttonTint="@color/white"
+                            android:text="Female"
+                            android:textColor="@color/white" />
+                    </RadioGroup>
+
+                    <!-- Date of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_date_of_birth_female"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Date of Birth Female"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Time of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_time_of_birth_female"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Time of Birth Female"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Place of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Place of Birth Female"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:orientation="horizontal">
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMale"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/white"
-                        android:text="Male"
-                        android:textColor="@color/white" />
+                        android:backgroundTint="@color/white"
+                        android:text="Fill Male Data"
+                        android:textColor="@color/black" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFemale"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/white"
-                        android:checked="true"
-                        android:enabled="true"
-                        android:text="Female"
-                        android:textColor="@color/white" />
-                </RadioGroup>
+                        android:backgroundTint="@color/white"
+                        android:text="Fill Female Data"
+                        android:textColor="@color/black" />
 
-                <!-- Date of Birth -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_date_of_birth_female"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:focusable="false"
-                        android:hint="Date of Birth Female"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Time of Birth -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_time_of_birth_female"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:focusable="false"
-                        android:hint="Time of Birth Female"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Place of Birth -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColorHint="@color/white"
-                    app:boxStrokeColor="@color/white"
-                    app:boxStrokeErrorColor="@color/white"
-                    app:hintTextColor="@color/white">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Place of Birth Female"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMale"
-                    android:layout_width="0dp"
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_weight="1"
+                    android:layout_marginTop="18dp"
                     android:backgroundTint="@color/white"
-                    android:text="Fill Male Data"
+                    android:onClick="@{viewModel::onNextClick}"
+                    android:text="Submit"
                     android:textColor="@color/black" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnFemale"
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/errorMessage"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="Fill Female Data"
-                    android:textColor="@color/black" />
-
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@{viewModel.errorMsgObserver}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.errorMsgObserver != null ? View.VISIBLE : View.GONE}" />
 
             </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnNext"
-                android:layout_width="match_parent"
+        <FrameLayout
+            android:id="@+id/progress_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_overlay"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:backgroundTint="@color/white"
-                android:text="Submit"
-                android:onClick="@{viewModel::onNextClick}"
-                android:textColor="@color/black" />
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:theme="@style/Widget.AppCompat.ProgressBar" />
+        </FrameLayout>
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
 </layout>
 

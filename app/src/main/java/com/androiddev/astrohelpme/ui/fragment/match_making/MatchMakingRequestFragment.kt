@@ -75,11 +75,14 @@ class MatchMakingRequestFragment :
             val minute = calendar.get(Calendar.MINUTE)
 
             TimePickerDialog(requireContext(), { _, selectedHour, selectedMinute ->
-                binding.etTimeOfBirthMale.setText("$selectedHour:$selectedMinute")
-            }, hour, minute, true).show()
+                binding.etTimeOfBirthMale.setText(String.format("%02d:%02d", selectedHour, selectedMinute))
 
-            viewModel.m_hour = hour
-            viewModel.m_hour = minute
+                Log.d("MYTAG", "onViewCreated: time after select $selectedHour:$selectedMinute")
+
+                // Update ViewModel with the selected time
+                viewModel.m_hour = selectedHour
+                viewModel.m_min = selectedMinute
+            }, hour, minute, true).show()
         }
 
         binding.etTimeOfBirthFemale.setOnClickListener {
@@ -88,11 +91,13 @@ class MatchMakingRequestFragment :
             val minute = calendar.get(Calendar.MINUTE)
 
             TimePickerDialog(requireContext(), { _, selectedHour, selectedMinute ->
-                binding.etTimeOfBirthFemale.setText("$selectedHour:$selectedMinute")
-            }, hour, minute, true).show()
+                binding.etTimeOfBirthFemale.setText(String.format("%02d:%02d", selectedHour, selectedMinute))
+                Log.d("MYTAG", "onViewCreated: time after select $selectedHour:$selectedMinute")
 
-            viewModel.f_hour = hour
-            viewModel.f_hour = minute
+                // Update ViewModel with the selected time
+                viewModel.f_hour = selectedHour
+                viewModel.f_min = selectedMinute
+            }, hour, minute, true).show()
         }
 
     }
@@ -107,15 +112,18 @@ class MatchMakingRequestFragment :
         viewModel.matchMakingObserver.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
+                    viewModel.isLoading.value = true
                     Log.d("MYTAG", "subscriberObservers: progresssss")
                 }
 
                 is Resource.Success -> {
+                    viewModel.isLoading.value = false
                     Log.d("MYTAG", "subscriberObservers: " + it.data)
                     showMatchMakingFragment(it.data)
                 }
 
                 is Resource.Failure -> {
+                    viewModel.isLoading.value = false
                     Log.d("MYTAG", "subscriberObservers: " + it.exception)
                     activity?.handleNetworkFailure(it.exception)
                     activity?.makeToast(it.exception.message.toString())

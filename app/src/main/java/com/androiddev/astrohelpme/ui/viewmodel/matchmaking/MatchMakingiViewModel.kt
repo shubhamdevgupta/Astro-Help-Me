@@ -22,6 +22,7 @@ class MatchMakingiViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     var errorMsgObserver = MutableLiveData(AppConstants.EMPTY)
+    var isLoading = MutableLiveData(false)
     var m_day = 0
     var m_month = 0
     var m_year = 1111
@@ -46,7 +47,11 @@ class MatchMakingiViewModel @Inject constructor(
 
 
     fun onNextClick(view: View) {
-        Log.d("MYTAG", "onNextClick: male data--"+m_day   +   m_month  +  m_year  +   m_hour  +  m_min  +  m_lat+m_lon+m_tzone+" female----"+f_day+f_month+f_year+f_hour+f_min+f_lat+f_lon+f_tzone)
+        Log.d(
+            "MYTAG",
+            "onNextClick: male data--" + m_day + m_month + m_year + m_hour + m_min + m_lat + m_lon + m_tzone + " female----" + f_day + f_month + f_year + f_hour + f_min + f_lat + f_lon + f_tzone
+        )
+        if (!validateLoginInput()) return@onNextClick
         errorMsgObserver.value = AppConstants.EMPTY
         _matchMakingResponse.value = Resource.Loading<Nothing>()
         viewModelScope.launch {
@@ -63,6 +68,20 @@ class MatchMakingiViewModel @Inject constructor(
                 _matchMakingResponse.value = Resource.Failure(e)
             }
         }
+    }
+
+    private fun validateLoginInput(): Boolean {
+        val message = if (m_day != 0 && m_month != 0 && m_year != 0) {
+            if (m_hour != 0 && m_min != 0) {
+                if (f_day != 0 && f_month != 0 && f_year != 0) {
+                    if (f_hour != 0 && f_min != 0) {
+                        return true
+                    } else "Please Select Valid Female Time of Birth"
+                } else "Please Select Valid Female Date of Birth"
+            } else "Please Select Valid Male Time of Birth"
+        } else "Please Select Valid Male Date of Birth"
+        errorMsgObserver.value = message
+        return false
     }
 
 }

@@ -1,15 +1,14 @@
 package com.androiddev.astrohelpme.data.auth
 
 
-import com.androiddev.astrohelpme.data.response.KundliResponse
 import com.androiddev.astrohelpme.data.response.LoginResponse
 import com.androiddev.astrohelpme.data.response.OtpVerifyResponse
 import com.androiddev.astrohelpme.data.response.SetPassResponse
 import com.androiddev.astrohelpme.data.response.SignupResponse
+import com.androiddev.astrohelpme.data.response.registerResponse.RegisterAstroResponse
 import com.google.gson.annotations.SerializedName
 import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.Header
 import retrofit2.http.POST
 
 
@@ -26,9 +25,34 @@ interface AuthService {
 
     @POST("login")
     suspend fun apiLogin(@Body loginData: LoginData): Response<LoginResponse>
-
+    @POST("store-profile")
+    suspend fun registerAstro(@Body registerAstro: RegisterAstro): Response<RegisterAstroResponse>
 
 }
+
+
+class RegisterAstro internal constructor(
+    @SerializedName("user_id")
+    val user_id: String,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("gender")
+    val gender: String,
+    @SerializedName("phone_prefix")
+    val phone_prefix: String,
+    @SerializedName("phone_number")
+    val phone_number: String,
+    @SerializedName("email")
+    val email: String,
+    @SerializedName("experience")
+    val experience: String,
+    @SerializedName("city")
+    val city: String,
+    @SerializedName("country")
+    val country: String,
+    @SerializedName("short_bio")
+    val short_bio: String,
+)
 
 class UserSignup internal constructor(
     @SerializedName("mobile_number")

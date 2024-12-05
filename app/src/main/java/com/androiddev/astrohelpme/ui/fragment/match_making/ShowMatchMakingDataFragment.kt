@@ -1,5 +1,6 @@
 package com.androiddev.astrohelpme.ui.fragment.match_making
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.data.response.matchmaking.MatchMakingResponse
 import com.androiddev.astrohelpme.databinding.FragmentShowMatchMakingFramentBinding
+import com.androiddev.astrohelpme.ui.activity.DashboardActivity
 
 
 class ShowMatchMakingDataFragment : Fragment() {
@@ -38,6 +40,11 @@ class ShowMatchMakingDataFragment : Fragment() {
         binding.tvConclusionMatch.text = matchingResponse?.conclusion?.match.toString()
         binding.tvConclusionReport.text = matchingResponse?.conclusion?.report.toString()
 
+        binding.icSqaa.setOnClickListener {
+            val intent = Intent(requireActivity(), DashboardActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+        }
     }
 
     override fun onCreateView(
