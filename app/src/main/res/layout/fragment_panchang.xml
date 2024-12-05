@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.androiddev.astrohelpme.ui.viewmodel.panchang.PanchangViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lineat_gradient">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/baseline_arrow_back_24" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Daily Panchang"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <!-- Form Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Date of Birth -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_date_of_birth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Date of Birth"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/white"
+                        app:hintTextColor="@color/white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_time_of_birth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Time of Birth"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- Submit Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:backgroundTint="@color/white"
+                        android:onClick="@{viewModel::onNextClick}"
+                        android:text="Show Panchang"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/errorMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@{viewModel.errorMsgObserver}"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="@{viewModel.errorMsgObserver != null ? View.VISIBLE : View.GONE}" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/progress_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_overlay"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:theme="@style/Widget.AppCompat.ProgressBar" />
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>
+

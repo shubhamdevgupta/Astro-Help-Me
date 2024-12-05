@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.databinding.FragmentDashboardBinding
 import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFragment
+import com.androiddev.astrohelpme.ui.fragment.numerology.NumerologyFragment
+import com.androiddev.astrohelpme.ui.fragment.panchang.PanchangFragment
 import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
 
 
@@ -37,6 +39,20 @@ class DashboardFragment : Fragment() {
         binding.icMatchMaking.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container_view, MatchMakingRequestFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        binding.icNumerology.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_view, NumerologyFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        binding.icSwastik.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_view, PanchangFragment())
                 .addToBackStack(null)
                 .commit()
         }

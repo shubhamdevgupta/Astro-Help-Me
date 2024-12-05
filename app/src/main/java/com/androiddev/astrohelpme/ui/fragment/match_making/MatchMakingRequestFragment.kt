@@ -47,11 +47,11 @@ class MatchMakingRequestFragment :
 
             DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
                 binding.etDateOfBirthMale.setText("$selectedDay/${selectedMonth + 1}/$selectedYear")
+                viewModel.m_day = selectedDay
+                viewModel.m_month = selectedMonth
+                viewModel.m_year = selectedYear
             }, year, month, day).show()
 
-            viewModel.m_day = day
-            viewModel.m_month = month
-            viewModel.m_year = year
         }
 
         binding.etDateOfBirthFemale.setOnClickListener {
@@ -62,11 +62,11 @@ class MatchMakingRequestFragment :
 
             DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
                 binding.etDateOfBirthFemale.setText("$selectedDay/${selectedMonth + 1}/$selectedYear")
+                viewModel.f_day = selectedDay
+                viewModel.f_month = selectedMonth
+                viewModel.f_year = selectedYear
             }, year, month, day).show()
 
-            viewModel.f_day = day
-            viewModel.f_month = month
-            viewModel.f_year = year
         }
 
         binding.etTimeOfBirthMale.setOnClickListener {

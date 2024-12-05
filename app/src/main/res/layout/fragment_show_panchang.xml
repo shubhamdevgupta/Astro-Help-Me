@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/icSqaa"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:text="Daily Panchang"
+                android:textColor="#FF9800"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!-- Title -->
+
+        <!-- Table Layout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:stretchColumns="1">
+
+            <!-- Day Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Day:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Thursday" />
+            </TableRow>
+
+            <!-- Tithi Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Tithi:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tithiTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Shukla Panchami" />
+            </TableRow>
+
+            <!-- Nakshatra Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Nakshatra:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nakshatraTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Revati" />
+            </TableRow>
+
+            <!-- Yog Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Yog:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/yogTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Sadhya" />
+            </TableRow>
+
+            <!-- Karan Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Karan:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/karanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Bava" />
+            </TableRow>
+
+            <!-- Sunrise Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Sunrise:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sunriseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="07:12:41" />
+            </TableRow>
+
+            <!-- Sunset Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Sunset:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sunsetTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="18:38:17" />
+            </TableRow>
+
+            <!-- Vedic Sunrise Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Vedic Sunrise:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/vedicSunriseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="07:16:24" />
+            </TableRow>
+
+            <!-- Vedic Sunset Row -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Vedic Sunset:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/vedicSunsetTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="18:34:35" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

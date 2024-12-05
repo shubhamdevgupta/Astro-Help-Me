@@ -520,6 +520,7 @@
                 app:cardCornerRadius="12dp">
 
                 <LinearLayout
+                    android:id="@+id/ic_swastik"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -553,6 +554,7 @@
                 app:cardCornerRadius="12dp">
 
                 <LinearLayout
+                    android:id="@+id/ic_numerology"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -562,20 +564,21 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:padding="8dp"
-                        android:src="@drawable/ic_askquestion" />
+                        android:src="@drawable/ic_numerology" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Ask A\n Question"
+                        android:text="Numerology"
                         android:textColor="@color/orange"
                         android:textSize="12sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
@@ -668,14 +671,14 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:padding="8dp"
-                        android:src="@drawable/ic_numerology" />
+                        android:src="@drawable/ic_askquestion" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Numerology"
+                        android:text="Ask A\n Question"
                         android:textColor="@color/orange"
                         android:textSize="12sp"
                         android:textStyle="bold" />
