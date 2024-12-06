@@ -48,7 +48,7 @@ class MatchMakingRequestFragment :
             DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
                 binding.etDateOfBirthMale.setText("$selectedDay/${selectedMonth + 1}/$selectedYear")
                 viewModel.m_day = selectedDay
-                viewModel.m_month = selectedMonth
+                viewModel.m_month = selectedMonth+1
                 viewModel.m_year = selectedYear
             }, year, month, day).show()
 

@@ -34,7 +34,7 @@ class NumerologyFragment : BaseFragment<FragmentNumerologyBinding>(R.layout.frag
             DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
                 binding.etDateOfBirth.setText("$selectedDay/${selectedMonth + 1}/$selectedYear")
                 viewModel.day = selectedDay
-                viewModel.month = selectedMonth
+                viewModel.month = selectedMonth+1
                 viewModel.year = selectedYear
             }, year, month, day).show()
 
