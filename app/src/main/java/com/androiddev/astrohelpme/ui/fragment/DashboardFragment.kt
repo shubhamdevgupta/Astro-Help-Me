@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.databinding.FragmentDashboardBinding
+import com.androiddev.astrohelpme.ui.activity.DashboardActivity
 import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFragment
 import com.androiddev.astrohelpme.ui.fragment.numerology.NumerologyFragment
 import com.androiddev.astrohelpme.ui.fragment.panchang.PanchangFragment
@@ -43,13 +44,12 @@ class DashboardFragment : Fragment() {
                 .commit()
         }
 
-        binding.icNumerology.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, NumerologyFragment())
-                .addToBackStack(null)
-                .commit()
+        binding.icHoroscop.setOnClickListener {
+            comingSoon()
         }
-
+        binding.icTalktoAstrologer.setOnClickListener {
+            comingSoon()
+        }
         binding.icSwastik.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container_view, PanchangFragment())
@@ -57,7 +57,73 @@ class DashboardFragment : Fragment() {
                 .commit()
         }
 
+        binding.icAskquestion.setOnClickListener {
+            comingSoon()
+        }
+        binding.icDhruv.setOnClickListener {
+            comingSoon()
+        }
+        binding.icBhirat.setOnClickListener {
+            comingSoon()
+        }
 
+        binding.icNumerology.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_view, NumerologyFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+
+        binding.icAstroshop.setOnClickListener {
+          comingSoon()
+        }
+        binding.icMagazine.setOnClickListener {
+            comingSoon()
+        }
+        binding.icKpsystem.setOnClickListener {
+            comingSoon()
+        }
+        binding.icLalKitab.setOnClickListener {
+            comingSoon()
+        }
+        binding.icVarshapal.setOnClickListener {
+            comingSoon()
+        }
+        binding.icLearnastrology.setOnClickListener {
+            comingSoon()
+        }
+        binding.icPorutham.setOnClickListener {
+            comingSoon()
+        }
+        binding.icFestival.setOnClickListener {
+            comingSoon()
+        }
+        binding.icMiscellions.setOnClickListener {
+            comingSoon()
+        }
+        binding.icDasha.setOnClickListener {
+            comingSoon()
+        }
+        binding.icCalendar.setOnClickListener {
+            comingSoon()
+        }
+
+
+
+
+        binding.icDrawer.setOnClickListener {
+            (activity as DashboardActivity).openNavigationDrawer()
+        }
+
+
+
+    }
+    fun comingSoon(){
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_view, ComingSoonFragment())
+            .addToBackStack(null)
+            .commit()
     }
 
 }

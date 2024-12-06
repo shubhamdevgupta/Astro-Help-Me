@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:gravity="center"
-                    android:text="Astro Help Me"
+                    android:text="@string/astro_help_me"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:gravity="center"
-                    android:text="Login"
+                    android:text="@string/login"
                     android:textColor="@color/white"
                     android:textSize="36sp" />
 
@@ -62,7 +62,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Mobile Number"
+                        android:hint="@string/mobile_number"
                         android:inputType="number"
                         android:maxLength="10"
                         android:text="@={viewModel.mobileNumber}"
@@ -84,7 +84,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="@string/password"
                         android:inputType="textPassword"
                         android:maxLength="10"
                         android:text="@={viewModel.password}"
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
                     android:gravity="right"
-                    android:text="Forgot password?"
+                    android:text="@string/forgot_password"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -108,7 +108,7 @@
                     android:layout_margin="18dp"
                     android:backgroundTint="#ffffff"
                     android:onClick="@{viewModel::onSubmitClick}"
-                    android:text="Login"
+                    android:text="@string/login"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -128,7 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Don't Have an account? Register Now"
+                    android:text="@string/don_t_have_an_account_register_now"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
             </LinearLayout>

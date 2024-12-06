@@ -23,11 +23,11 @@
         android:id="@+id/nav_aboutus"
         android:title="About Us" />
     <item
-        android:id="@+id/nav_delete"
-        android:title="Delete My Account" />
+        android:id="@+id/nav_englishLanguage"
+        android:title="English Language" />
     <item
-        android:id="@+id/nav_changelanguage"
-        android:title="Change Language" />
+        android:id="@+id/nav_hindiLanguage"
+        android:title="Hindi Language" />
 
     <item
         android:id="@+id/nav_logout"
