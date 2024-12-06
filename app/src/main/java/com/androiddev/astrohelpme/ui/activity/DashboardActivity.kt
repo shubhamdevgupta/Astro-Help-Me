@@ -2,6 +2,7 @@ package com.androiddev.astrohelpme.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,6 +14,7 @@ import com.androiddev.astrohelpme.ui.fragment.DashboardFragment
 import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFragment
 import com.androiddev.astrohelpme.ui.fragment.register_astrologer.RegisterAstrologerFragment
 import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
+import com.androiddev.astrohelpme.utils.helper.LocaleHelper
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -40,11 +42,45 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
                 R.id.nav_home -> loadFragment(DashboardFragment())
                 R.id.nav_astrologer -> loadFragment(ShowKundliDataFragment())
                 R.id.nav_registerastrologer -> loadFragment(RegisterAstrologerFragment())
+                R.id.nav_hindiLanguage -> changeLanguageHindi()
+                R.id.nav_englishLanguage -> changeLanguageEnglish()
                 R.id.nav_logout -> logout()
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
+
+    }
+    fun  openNavigationDrawer(){
+        binding.drawerLayout.openDrawer(GravityCompat.START)
+    }
+
+    private fun changeLanguageHindi() {
+        appPreference.language = "hi"
+        LocaleHelper.setLocale(this, "hi")
+        Log.d("MYTAG", "changeLanguageHindi: " + appPreference.language)
+        Log.d(
+            "MYTAG", "getLanguage--->" + LocaleHelper.getLanguage(this)
+        )
+        restartApp(this)
+
+    }
+
+    private fun changeLanguageEnglish() {
+        appPreference.language = "en"
+        LocaleHelper.setLocale(this, "en")
+        Log.d("MYTAG", "changeLanguageEnglish: " + appPreference.language)
+        Log.d("MYTAG", "getLanguage---> " + LocaleHelper.getLanguage(this))
+        restartApp(this)
+    }
+
+    private fun restartApp(dashboardActivity: DashboardActivity) {
+
+        val intent =
+            dashboardActivity.packageManager.getLaunchIntentForPackage(dashboardActivity.packageName)
+        intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+        dashboardActivity.startActivity(intent)
+        Runtime.getRuntime().exit(0)
     }
 
     private fun loadFragment(fragment: Fragment) {

@@ -1,2 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">एस्ट्रो हेल्प मी</string>
+
+    <string name="open_drawer">ड्रावर खोलें</string>
+    <string name="close_drawer">ड्रावर बंद करें</string>
+
+    <string name="keep_me_login">मुझे लॉगिन रखें</string>
+    <string name="submit">सबमिट करें</string>
+    <string name="rooted_device_message">माफ़ करें! आपका डिवाइस ट्रैमो नॉर्टन की सुरक्षा जांच पास नहीं कर रहा है। यह इसलिए हो सकता है क्योंकि आपका डिवाइस रूटेड है, या असत्यापित या कस्टम OS बिल्ड पर चल रहा है। परिणामस्वरूप, ट्रैमो नॉर्टन पुष्टि नहीं कर सकता कि डिवाइस ट्रैमो नॉर्टन के सुरक्षा मानकों को पूरा करता है।</string>
+    <string name="rooted_device_title">ऐप नहीं चल सकता, यह रूटेड डिवाइस है</string>
+    <string name="no_internet_message">ऐप आपके नेटवर्क कनेक्शन का उपयोग करने में सक्षम नहीं है, सुनिश्चित करें कि आपके डिवाइस में पर्याप्त कनेक्शन है।</string>
+    <string name="please_check_transaction_report">कृपया लेनदेन रिपोर्ट की जांच करें</string>
+    <string name="transaction_error_message">आपका लेनदेन अज्ञात प्रतिक्रिया के साथ हुआ है, कृपया स्थिति की जांच के लिए रिपोर्ट देखें (हो सकता है सफल, विफल, या अभी तक नहीं हुआ हो)।</string>
+    <string name="login">लॉगिन</string>
+    <string name="failed">असफल</string>
+    <string name="select_brand">ब्रांड चुनें</string>
+    <string name="otp_is">आपका ओटीपी है</string>
+
+    <string name="dialog_permission_title">अनुमतियां दें</string>
+    <string name="go_to_settings">सेटिंग्स पर जाएं</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="resetting_password">पासवर्ड रीसेट कर रहे हैं</string>
+    <string name="alt_mobile">वैकल्पिक मोबाइल</string>
+    <string name="colon">   : </string>
+    <string name="address">पता</string>
+    <string name="city">शहर</string>
+    <string name="pincode">पिनकोड</string>
+    <string name="aadhaar_number">आधार नंबर</string>
+    <string name="gst_number">जीएसटी नंबर</string>
+    <string name="pan_number">पैन नंबर</string>
+
+    <string name="selected_item">सेवा का चयन करें :</string>
+    <string-array name="Services">
+        <item>बैलेंस पूछताछ</item>
+        <item>नकद निकासी</item>
+        <item>मिनी स्टेटमेंट</item>
+    </string-array>
+    <string name="selected_finger">उंगली चुनें :</string>
+    <string-array name="Finger">
+        <item>एफआईआर</item>
+        <item>एफएमआई</item>
+        <item>एफएमआर</item>
+    </string-array>
+
+    <string name="selected_bank">बैंक चुनें :</string>
+
+    <string-array name="Bank">
+        <item>बैंक चुनें</item>
+        <item>भारतीय स्टेट बैंक</item>
+        <item>एचडीएफसी बैंक</item>
+        <item>पेटीएम पेमेंट बैंक</item>
+        <item>आईसीआईसीआई बैंक</item>
+        <item>यस बैंक</item>
+        <item>पीएनबी बैंक</item>
+        <item>कोटक महिंद्रा बैंक</item>
+        <item>यूनियन बैंक</item>
+        <item>आंध्र बैंक</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">हैलो ब्लैंक फ्रैगमेंट</string>
+    <string name="astro_help_me">एस्ट्रो हेल्प मी</string>
+    <string name="mobile_number">मोबाइल नंबर</string>
+    <string name="password">पासवर्ड</string>
+    <string name="forgot_password">पासवर्ड भूल गए?</string>
+    <string name="don_t_have_an_account_register_now">क्या आपके पास खाता नहीं है? अभी रजिस्टर करें</string>
+
+    <string name="search">खोजें</string>
+    <string name="categories">श्रेणियाँ</string>
+    <string name="kundli">कुंडली</string>
+    <string name="match_making">मिलान</string>
+    <string name="horoscope">राशिफल</string>
+    <string name="talk_to_nastrologer">ज्योतिषी से बात करें</string>
+    <string name="live_tv_astrologer">लाइव टीवी ज्योतिषी</string>
+    <string name="vivek">विवेक</string>
+    <string name="bobby">बॉबी</string>
+    <string name="vishal">विशाल</string>
+    <string name="kamal">कमल</string>
+    <string name="boby">बॉबी</string>
+    <string name="_4_3_free">4.3 | फ्री</string>
+
+</resources>

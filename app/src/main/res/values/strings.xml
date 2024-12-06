@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Astro help me</string>
 
     <string name="open_drawer">Open Drawer</string>
@@ -61,5 +61,24 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="astro_help_me">Astro Help Me</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="don_t_have_an_account_register_now">Don\'t Have an account? Register Now</string>
+
+    <string name="search">Search</string>
+    <string name="categories">Categories</string>
+    <string name="kundli">Kundli</string>
+    <string name="match_making">Match Making</string>
+    <string name="horoscope">Horoscope</string>
+    <string name="talk_to_nastrologer">Talk to\nAstrologer</string>
+    <string name="live_tv_astrologer">Live TV Astrologer</string>
+    <string name="vivek">Vivek</string>
+    <string name="bobby">Bobby</string>
+    <string name="vishal">Vishal</string>
+    <string name="kamal">Kamal</string>
+    <string name="boby">Boby</string>
+    <string name="_4_3_free">4.3 | Free</string>
 
 </resources>
