@@ -54,7 +54,7 @@ class AstroHelpme : Application() {
                         // In the sample app, the `LiveData` class notifies you on the initialization progress
                         // And observes the `MutableLiveData<InitState> initState` value in `SplashActivity()`.
                         // If successful, the `LoginActivity` screen
-                        // Or the `HomeActivity` screen will show.....!!!!!
+                        // Or the `HomeActivity` screen will show.....!!!!!@@@@@
                     }
                 }
             }
