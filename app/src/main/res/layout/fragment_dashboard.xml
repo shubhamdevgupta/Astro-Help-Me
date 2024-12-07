@@ -233,6 +233,36 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- Repeat these blocks for each astrologer -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_pranav" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="Pranav"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1">
 
                 <LinearLayout
@@ -245,14 +275,14 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_userimage" />
+                        android:src="@drawable/ic_sallwan" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="@string/vivek"
+                        android:text="Sallwan"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -275,14 +305,14 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_userimage" />
+                        android:src="@drawable/ic_preeti" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="@string/bobby"
+                        android:text="Preeti"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -305,48 +335,19 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_userimage" />
+                        android:src="@drawable/ic_lalit" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="@string/vishal"
+                        android:text="Lalit"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <!-- Repeat these blocks for each astrologer -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ic_userimage" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:gravity="center"
-                        android:text="@string/kamal"
-                        android:textColor="@android:color/white"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -391,7 +392,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="@string/boby"
+                        android:text="Ramesh"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
 
@@ -424,7 +425,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Vishal"
+                        android:text="Abhishek"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
 
@@ -457,7 +458,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Raghu"
+                        android:text="Rakhi"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
 
