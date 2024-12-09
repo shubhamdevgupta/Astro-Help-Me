@@ -16,7 +16,7 @@
 
 ## 📸 Screenshots
 
-| Home Screen                              | Horoscope Screen                        | Live Chat                                   |
+| Dashboard Screen                              | User Screen                        | Panchang Screen                                  |
 | ---------------------------------------- | --------------------------------------- | ------------------------------------------- |
 | ![Home](screenshot/screen_dashboard.png) | ![Horoscope](screenshot/screen_nav.png) | ![Panchange](screenshot/screen_panchang.png) |
 
