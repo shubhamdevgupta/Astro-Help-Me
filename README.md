@@ -18,7 +18,7 @@
 
 | Home Screen | Horoscope Screen | Live Chat |
 |-------------|------------------|-----------|
-| ![Home](https://via.placeholder.com/150) | ![Horoscope](https://via.placeholder.com/150) | ![Chat](https://via.placeholder.com/150) |
+| ![Home](screenshot/screen_dashboard.png) | ![Horoscope](screenshot/screen_nav.png) | ![Panchange](screenshot/screen_panchag.png) |
 
 ---
 
