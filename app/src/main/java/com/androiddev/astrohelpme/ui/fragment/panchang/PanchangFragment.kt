@@ -11,7 +11,6 @@ import com.androiddev.astrohelpme.R
 import com.androiddev.astrohelpme.data.response.panchang.PanchangResponse
 import com.androiddev.astrohelpme.databinding.FragmentPanchangBinding
 import com.androiddev.astrohelpme.ui.fragment.BaseFragment
-import com.androiddev.astrohelpme.ui.fragment.numerology.ShowNumeerologyFragment
 import com.androiddev.astrohelpme.ui.viewmodel.panchang.PanchangViewModel
 import com.androiddev.astrohelpme.utils.api.Resource
 import com.androiddev.astrohelpme.utils.extns.handleNetworkFailure
@@ -37,12 +36,14 @@ class PanchangFragment : BaseFragment<FragmentPanchangBinding>(R.layout.fragment
             DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
                 binding.etDateOfBirth.setText("$selectedDay/${selectedMonth + 1}/$selectedYear")
                 viewModel.day = selectedDay
-                viewModel.month = selectedMonth+1
+                viewModel.month = selectedMonth + 1
                 viewModel.year = selectedYear
 
             }, year, month, day).show()
+        }
 
-
+        binding.icBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
         }
 
         binding.etTimeOfBirth.setOnClickListener {
