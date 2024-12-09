@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="12dp"
-            android:text="Know your Future From"
+            android:text="@string/know_your_future_from"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="4dp"
-            android:text="Professional"
+            android:text="@string/professional"
             android:textColor="@color/white"
             android:textSize="48sp"
             android:textStyle="bold" />
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="4dp"
-            android:text="Astrologer"
+            android:text="@string/astrologer"
             android:textColor="@color/white"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:backgroundTint="@color/white"
-            android:text="Get Started"
+            android:text="@string/get_started"
             android:textColor="@color/black" />
 
 

@@ -16,7 +16,7 @@ class AstroHelpme : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        LocaleHelper.setLocale(this, "hi")
+        LocaleHelper.setLocale(this, appPreference.language)
         Log.d("MYTAG", "onCreate: app set after restart "+appPreference.language)
     }
 

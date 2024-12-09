@@ -12,6 +12,7 @@ import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFra
 import com.androiddev.astrohelpme.ui.fragment.numerology.NumerologyFragment
 import com.androiddev.astrohelpme.ui.fragment.panchang.PanchangFragment
 import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
+import com.androiddev.astrohelpme.utils.helper.LocaleHelper.setLocale
 
 
 class DashboardFragment : Fragment() {
@@ -109,7 +110,12 @@ class DashboardFragment : Fragment() {
             comingSoon()
         }
 
+        val newContext = setLocale(requireContext(), "hi")
+        val resources = newContext?.resources
 
+        if (resources != null) {
+            binding.tvFooter.text = resources.getString(R.string.share_app_with_friends)
+        }
 
 
         binding.icDrawer.setOnClickListener {

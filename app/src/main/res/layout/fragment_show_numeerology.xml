@@ -27,7 +27,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingBottom="16dp"
-                android:text="Numerology for You"
+                android:text="@string/numerology_for_you"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -529,7 +529,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Name:"
+                        android:text="@string/name"
                         android:textStyle="bold" />
 
                     <TextView
@@ -547,7 +547,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Date:"
+                        android:text="@string/date"
                         android:textStyle="bold" />
 
                     <TextView
@@ -565,7 +565,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Destiny Number:"
+                        android:text="@string/destiny_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -583,7 +583,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Radical Number:"
+                        android:text="@string/radical_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -601,7 +601,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Name Number:"
+                        android:text="@string/name_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -618,7 +618,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Evil Number:"
+                        android:text="@string/evil_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -635,7 +635,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav Color:"
+                        android:text="@string/fav_color"
                         android:textStyle="bold" />
 
                     <TextView
@@ -652,7 +652,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav Day:"
+                        android:text="@string/fav_day"
                         android:textStyle="bold" />
 
                     <TextView
@@ -669,7 +669,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav God:"
+                        android:text="@string/fav_god"
                         android:textStyle="bold" />
 
                     <TextView
@@ -686,7 +686,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav Mantra:"
+                        android:text="@string/fav_mantra"
                         android:textStyle="bold" />
 
                     <TextView
@@ -703,7 +703,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav Metal:"
+                        android:text="@string/fav_metal"
                         android:textStyle="bold" />
 
                     <TextView
@@ -720,7 +720,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav Stone:"
+                        android:text="@string/fav_stone"
                         android:textStyle="bold" />
 
                     <TextView
@@ -737,7 +737,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Fav Sub Stone:"
+                        android:text="@string/fav_sub_stone"
                         android:textStyle="bold" />
 
                     <TextView
@@ -754,7 +754,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Friendly Number:"
+                        android:text="@string/friendly_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -771,7 +771,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Neutral Number:"
+                        android:text="@string/neutral_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -788,7 +788,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Radical Number:"
+                        android:text="@string/radical_number"
                         android:textStyle="bold" />
 
                     <TextView
@@ -805,7 +805,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Radical Ruler:"
+                        android:text="@string/radical_ruler"
                         android:textStyle="bold" />
 
                     <TextView

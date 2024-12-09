@@ -42,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Daily Panchang"
+                        android:text="@string/daily_panchang"
                         android:textColor="@color/white"
                         android:textSize="24sp" />
 
@@ -70,7 +70,7 @@
                             android:layout_height="wrap_content"
                             android:clickable="true"
                             android:focusable="false"
-                            android:hint="Date of Birth"
+                            android:hint="@string/date_of_birth"
                             android:textColor="@color/white" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +89,7 @@
                             android:layout_height="wrap_content"
                             android:clickable="true"
                             android:focusable="false"
-                            android:hint="Time of Birth"
+                            android:hint="@string/time_of_birth"
                             android:textColor="@color/white" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,7 +101,7 @@
                         android:layout_marginTop="18dp"
                         android:backgroundTint="@color/white"
                         android:onClick="@{viewModel::onNextClick}"
-                        android:text="Show Panchang"
+                        android:text="@string/show_panchang"
                         android:textColor="@color/black" />
 
                     <TextView

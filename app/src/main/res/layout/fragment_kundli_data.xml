@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="16dp"
-                android:text="Astrology Kundli Details"
+                android:text="@string/astrology_kundli_details"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -54,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ascendant:"
+                android:text="@string/ascendant"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -80,7 +80,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ascendant Lord:"
+                android:text="@string/ascendant_lord"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -104,7 +104,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Varna :"
+                android:text="@string/varna"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -128,7 +128,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Vashya:"
+                android:text="@string/vashya"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -152,7 +152,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yoni:"
+                android:text="@string/yoni"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -176,7 +176,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Gan:"
+                android:text="@string/gan"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -200,7 +200,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nadi:"
+                android:text="@string/nadi"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -224,7 +224,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SignLord:"
+                android:text="@string/signlord"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -248,7 +248,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="sign:"
+                android:text="@string/sign"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -272,7 +272,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Naksahtra:"
+                android:text="@string/naksahtra"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -296,7 +296,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="NaksahtraLord:"
+                android:text="@string/naksahtralord"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -320,7 +320,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Charan:"
+                android:text="@string/charan"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -344,7 +344,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yog:"
+                android:text="@string/yog"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -368,7 +368,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Karan:"
+                android:text="@string/karan"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -392,7 +392,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tithi:"
+                android:text="@string/tithi"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -416,7 +416,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name alphabet:"
+                android:text="@string/name_alphabet"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -440,7 +440,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="paya:"
+                android:text="@string/paya"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -464,7 +464,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tatva:"
+                android:text="@string/tatva"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
