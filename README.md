@@ -41,7 +41,7 @@ Would you like help customizing this further?
 
 ## ⚙️ Installation
 
-1. Clone the repository::
+1. Clone the repository:
    ```bash
    git clone https://github.com/shubhamdevgupta/Astro-Help-Me.git
    ```
