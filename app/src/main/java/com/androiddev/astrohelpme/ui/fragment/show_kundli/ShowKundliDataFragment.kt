@@ -44,6 +44,9 @@ class ShowKundliDataFragment :
                 viewModel.year = selectedYear
             }, year, month, day).show()
         }
+        binding.icBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
 
         binding.etTimeOfBirth.setOnClickListener {
             val calendar = Calendar.getInstance()
@@ -106,6 +109,7 @@ class ShowKundliDataFragment :
             .commit()
 
     }
+
 
 
 
