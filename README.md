@@ -16,8 +16,8 @@
 
 ## 📸 Screenshots
 
-| Home Screen | Horoscope Screen | Live Chat |
-|-------------|------------------|-----------|
+| Home Screen                              | Horoscope Screen                        | Live Chat                                   |
+| ---------------------------------------- | --------------------------------------- | ------------------------------------------- |
 | ![Home](screenshot/screen_dashboard.png) | ![Horoscope](screenshot/screen_nav.png) | ![Panchange](screenshot/screen_panchag.png) |
 
 ---
@@ -33,14 +33,15 @@
 ---
 
 ### How to Use
+
 1. Copy this text and paste it into a file named `README.md` in your GitHub repository.
 2. Replace placeholders like email, screenshots, or links with your actual details.
 
 Would you like help customizing this further?
 
-
 ## ⚙️ Installation
 
-1. Clone the repository:
+1. Clone the repository::
    ```bash
    git clone https://github.com/shubhamdevgupta/Astro-Help-Me.git
+   ```
