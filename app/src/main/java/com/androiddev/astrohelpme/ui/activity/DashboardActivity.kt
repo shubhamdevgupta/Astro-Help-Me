@@ -1,5 +1,6 @@
 package com.androiddev.astrohelpme.ui.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,7 @@ import com.androiddev.astrohelpme.ui.fragment.match_making.MatchMakingRequestFra
 import com.androiddev.astrohelpme.ui.fragment.register_astrologer.RegisterAstrologerFragment
 import com.androiddev.astrohelpme.ui.fragment.show_kundli.ShowKundliDataFragment
 import com.androiddev.astrohelpme.utils.helper.LocaleHelper
+import com.androiddev.astrohelpme.utils.helper.LocaleHelper.setLocale
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -51,36 +53,38 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
         }
 
     }
-    fun  openNavigationDrawer(){
-        binding.drawerLayout.openDrawer(GravityCompat.START)
+
+    override fun attachBaseContext(newBase: Context?) {
+        val sharedPreferences = newBase?.getSharedPreferences("settings", Context.MODE_PRIVATE)
+        val savedLanguage = sharedPreferences?.getString("language", "en") ?: "en" // Default to "en"
+        super.attachBaseContext(setLocale(newBase, savedLanguage) ?: newBase)
     }
 
     private fun changeLanguageHindi() {
-        appPreference.language = "hi"
-        LocaleHelper.setLocale(this, "hi")
-        Log.d("MYTAG", "changeLanguageHindi: " + appPreference.language)
-        Log.d(
-            "MYTAG", "getLanguage--->" + LocaleHelper.getLanguage(this)
-        )
+        saveLanguagePreference("hi") // Save the preference
+        setLocale(this, "hi")
         restartApp(this)
 
     }
 
     private fun changeLanguageEnglish() {
-        appPreference.language = "en"
-        LocaleHelper.setLocale(this, "en")
-        Log.d("MYTAG", "changeLanguageEnglish: " + appPreference.language)
-        Log.d("MYTAG", "getLanguage---> " + LocaleHelper.getLanguage(this))
+        saveLanguagePreference("en") // Save the preference
+        setLocale(this, "en")
         restartApp(this)
+    }
+    private fun saveLanguagePreference(language: String) {
+        val sharedPreferences = getSharedPreferences("settings", Context.MODE_PRIVATE)
+        sharedPreferences.edit().putString("language", language).apply()
     }
 
     private fun restartApp(dashboardActivity: DashboardActivity) {
-
-        val intent =
-            dashboardActivity.packageManager.getLaunchIntentForPackage(dashboardActivity.packageName)
-        intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+        val intent = Intent(dashboardActivity, DashboardActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         dashboardActivity.startActivity(intent)
-        Runtime.getRuntime().exit(0)
+        finish()
+    }
+    fun  openNavigationDrawer(){
+        binding.drawerLayout.openDrawer(GravityCompat.START)
     }
 
     private fun loadFragment(fragment: Fragment) {

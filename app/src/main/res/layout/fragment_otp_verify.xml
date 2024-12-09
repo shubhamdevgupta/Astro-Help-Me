@@ -46,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
                         android:gravity="center"
-                        android:text="Enter  OTP"
+                        android:text="@string/enter_otp"
                         android:textColor="@color/white"
                         android:textSize="36sp" />
 
@@ -59,7 +59,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Otp sent to  "
+                            android:text="@string/otp_sent_to"
                             android:textColor="@color/white"
                             android:textSize="12sp" />
 
@@ -86,7 +86,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Enter your otp"
+                            android:hint="@string/enter_your_otp"
                             android:inputType="number"
                             android:maxLength="6"
                             android:text="@={viewModel.otp}"
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
                         android:gravity="center"
-                        android:text="Resend OTP"
+                        android:text="@string/resend_otp"
                         android:textColor="@color/white"
                         android:textSize="12sp" />
 
@@ -110,7 +110,7 @@
                         android:layout_margin="28dp"
                         android:backgroundTint="#ffffff"
                         android:onClick="@{viewModel::onNextClick}"
-                        android:text="Next"
+                        android:text="@string/next"
                         android:textColor="@color/black" />
 
                     <TextView

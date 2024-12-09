@@ -23,7 +23,6 @@ class ShowPanchangFragment : Fragment() {
         val panchangResponse: PanchangResponse? =
             arguments?.getSerializable("panchangresponse") as? PanchangResponse
 
-        Log.d("MYTAG", "onViewCreated: panchang response---->"+panchangResponse)
 
         binding.dayTextView.text = panchangResponse?.day
         binding.tithiTextView.text = panchangResponse?.tithi

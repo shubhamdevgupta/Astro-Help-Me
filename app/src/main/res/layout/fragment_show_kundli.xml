@@ -42,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Show Kundli"
+                        android:text="@string/show_kundli"
                         android:textColor="@color/white"
                         android:textSize="24sp" />
 
@@ -67,7 +67,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Enter Your Name"
+                            android:hint="@string/enter_your_name"
                             android:textColor="@color/white" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,7 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Gender"
+                        android:text="@string/gender"
                         android:textColor="@color/white"
                         android:textSize="16sp" />
 
@@ -91,7 +91,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:buttonTint="@color/white"
-                            android:text="Male"
+                            android:text="@string/male"
                             android:textColor="@color/white" />
 
                         <RadioButton
@@ -99,7 +99,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:buttonTint="@color/white"
-                            android:text="Female"
+                            android:text="@string/female"
                             android:textColor="@color/white" />
                     </RadioGroup>
 
@@ -139,7 +139,7 @@
                             android:layout_height="wrap_content"
                             android:clickable="true"
                             android:focusable="false"
-                            android:hint="Time of Birth"
+                            android:hint="@string/time_of_birth"
                             android:textColor="@color/white" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +156,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Place of Birth"
+                            android:hint="@string/place_of_birth"
                             android:textColor="@color/white" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -167,7 +167,7 @@
                         android:layout_marginTop="18dp"
                         android:backgroundTint="@color/white"
                         android:onClick="@{viewModel::onNextClick}"
-                        android:text="Show Kundli"
+                        android:text="@string/show_kundli"
                         android:textColor="@color/black" />
                     <TextView
                         android:id="@+id/errorMessage"

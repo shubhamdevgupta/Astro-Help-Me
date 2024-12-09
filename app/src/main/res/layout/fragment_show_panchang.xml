@@ -28,7 +28,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingBottom="16dp"
-                android:text="Daily Panchang"
+                android:text="@string/daily_panchang"
                 android:textColor="#FF9800"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Day:"
+                    android:text="@string/day"
                     android:textStyle="bold" />
 
                 <TextView
@@ -68,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Tithi:"
+                    android:text="@string/tithi"
                     android:textStyle="bold" />
 
                 <TextView
@@ -86,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Nakshatra:"
+                    android:text="@string/nakshatra"
                     android:textStyle="bold" />
 
                 <TextView
@@ -104,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Yog:"
+                    android:text="@string/yog"
                     android:textStyle="bold" />
 
                 <TextView
@@ -122,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Karan:"
+                    android:text="@string/karan"
                     android:textStyle="bold" />
 
                 <TextView
@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Sunrise:"
+                    android:text="@string/sunrise"
                     android:textStyle="bold" />
 
                 <TextView
@@ -158,7 +158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Sunset:"
+                    android:text="@string/sunset"
                     android:textStyle="bold" />
 
                 <TextView
@@ -176,7 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Vedic Sunrise:"
+                    android:text="@string/vedic_sunrise"
                     android:textStyle="bold" />
 
                 <TextView
@@ -194,7 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Vedic Sunset:"
+                    android:text="@string/vedic_sunset"
                     android:textStyle="bold" />
 
                 <TextView

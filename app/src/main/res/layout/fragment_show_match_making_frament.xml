@@ -26,7 +26,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingBottom="16dp"
-                android:text="Match Making Details"
+                android:text="@string/match_making_details"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:text="Male Manglik Details"
+            android:text="@string/male_manglik_details"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
             android:id="@+id/tv_male_manglik_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manglik Status: "
+            android:text="@string/manglik_status"
             android:textSize="16sp" />
 
         <TextView
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Based on Aspect:"
+            android:text="@string/based_on_aspect"
             android:textStyle="bold" />
 
         <!-- Add dynamic TextViews for each aspect -->
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Based on House:"
+            android:text="@string/based_on_house"
             android:textStyle="bold" />
 
         <!-- Add dynamic TextViews for each house -->
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Manglik Report:" />
+            android:text="@string/manglik_report" />
 
         <!-- Female Section -->
         <TextView
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-            android:text="Female Manglik Details"
+            android:text="@string/female_manglik_details"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -94,7 +94,7 @@
             android:id="@+id/tv_female_manglik_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manglik Status: "
+            android:text="@string/manglik_status"
             android:textSize="16sp" />
 
         <TextView
@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Based on Aspect:"
+            android:text="@string/based_on_aspect"
             android:textStyle="bold" />
 
         <!-- Add dynamic TextViews for each aspect -->
@@ -112,7 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Based on House:"
+            android:text="@string/based_on_house"
             android:textStyle="bold" />
 
         <!-- Add dynamic TextViews for each house -->
@@ -122,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Manglik Report:" />
+            android:text="@string/manglik_report" />
 
         <!-- Conclusion Section -->
         <TextView
@@ -131,7 +131,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"
-            android:text="Conclusion"
+            android:text="@string/conclusion"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -139,7 +139,7 @@
             android:id="@+id/tv_conclusion_match"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Match: "
+            android:text="@string/match"
             android:textSize="16sp" />
 
         <TextView
@@ -147,7 +147,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
-            android:text="Report: " />
+            android:text="@string/report" />
 
     </LinearLayout>
 </ScrollView>
