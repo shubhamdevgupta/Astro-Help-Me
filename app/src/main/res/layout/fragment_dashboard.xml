@@ -243,18 +243,19 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_pranav" />
+                        android:src="@drawable/ic_pranav"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Pranav"
+                        android:text="@string/pranav"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -271,18 +272,19 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_sallwan" />
+                        android:src="@drawable/ic_sallwan"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Sallwan"
+                        android:text="@string/sallwan"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -301,18 +303,19 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_preeti" />
+                        android:src="@drawable/ic_preeti"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Preeti"
+                        android:text="@string/preeti"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -331,18 +334,19 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="4dp"
-                        android:src="@drawable/ic_lalit" />
+                        android:src="@drawable/ic_lalit"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Lalit"
+                        android:text="@string/lalit"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -358,7 +362,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:text="Chat/Call with Astrologer"
+            android:text="@string/chat_call_with_astrologer"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -392,7 +396,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Ramesh"
+                        android:text="@string/ramesh"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
 
@@ -425,7 +429,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Abhishek"
                         android:text="@string/vishal"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />
@@ -459,7 +462,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Rakhi"
                         android:text="@string/raghu"
                         android:textColor="@android:color/white"
                         android:textSize="12sp" />

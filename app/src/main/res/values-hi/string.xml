@@ -193,5 +193,11 @@
     <string name="confirm_your_password">अपने पासवर्ड की पुष्टि करें</string>
     <string name="sign_up">साइन अप करें</string>
     <string name="already_have_an_account_sign_in">पहले से खाता है? साइन इन करें</string>
+    <string name="pranav">प्रणव</string>
+    <string name="sallwan">सलवान</string>
+    <string name="preeti">प्रीति</string>
+    <string name="lalit">ललित</string>
+    <string name="chat_call_with_astrologer">ज्योतिषी के साथ चैट/कॉल</string>
+    <string name="ramesh">रमेश</string>
 
 </resources>

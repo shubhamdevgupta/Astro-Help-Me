@@ -196,5 +196,11 @@
     <string name="confirm_your_password">Confirm your password</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_have_an_account_sign_in">Already Have an account? Sign in</string>
+    <string name="pranav">Pranav</string>
+    <string name="sallwan">Sallwan</string>
+    <string name="preeti">Preeti</string>
+    <string name="lalit">Lalit</string>
+    <string name="chat_call_with_astrologer">Chat/Call with Astrologer</string>
+    <string name="ramesh">Ramesh</string>
 
 </resources>

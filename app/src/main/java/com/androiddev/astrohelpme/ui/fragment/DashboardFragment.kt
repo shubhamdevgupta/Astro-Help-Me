@@ -1,5 +1,6 @@
 package com.androiddev.astrohelpme.ui.fragment
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -121,9 +122,6 @@ class DashboardFragment : Fragment() {
         binding.icDrawer.setOnClickListener {
             (activity as DashboardActivity).openNavigationDrawer()
         }
-
-
-
     }
     fun comingSoon(){
         parentFragmentManager.beginTransaction()

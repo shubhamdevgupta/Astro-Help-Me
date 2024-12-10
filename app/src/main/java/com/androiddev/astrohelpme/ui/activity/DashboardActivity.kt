@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -114,10 +115,26 @@ class DashboardActivity @Inject constructor() : AppCompatActivity() {
             is MatchMakingRequestFragment -> {
                 supportFragmentManager.popBackStack()
             }
+            is DashboardFragment -> {
+                showExitConfirmationDialog()
+            }
 
             else -> {
                 super.onBackPressed()
             }
         }
     }
+
+
+    private fun showExitConfirmationDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Exit App")
+            .setMessage("Are you sure you want to exit?")
+            .setPositiveButton("Yes") { _, _ ->
+                finish() // Close the activity
+            }
+            .setNegativeButton("No", null)
+            .show()
+    }
+
 }
