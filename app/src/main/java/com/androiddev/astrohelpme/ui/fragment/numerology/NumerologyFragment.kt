@@ -36,9 +36,10 @@ class NumerologyFragment : BaseFragment<FragmentNumerologyBinding>(R.layout.frag
                 viewModel.day = selectedDay
                 viewModel.month = selectedMonth+1
                 viewModel.year = selectedYear
-            }, year, month, day).show()
+            }, year, month, day).show() }
 
-
+        binding.icBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
         }
     }
 

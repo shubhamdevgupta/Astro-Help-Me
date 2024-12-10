@@ -1,14 +1,18 @@
 package com.androiddev.astrohelpme.utils.helper
 
 import android.content.Context
+import android.util.Log
 import java.util.Locale
 
 object LocaleHelper {
 
-    fun setLocale(context: Context?, language: String?): Context? {
+    fun setLocale(context: Context?, language: String): Context? {
+        if (context==null){
+            return null
+        }
         val locale = Locale(language)
         Locale.setDefault(locale)
-        val res = context?.resources
+        val res = context.resources
         val config = res?.configuration
         config?.setLocale(locale)
         config?.setLayoutDirection(locale)

@@ -76,6 +76,6 @@ class AppPreference @Inject constructor(private val sharedPreferences: SharedPre
 
         // Language keys
         private const val KEY_LANGUAGE = "language"
-        private const val DEFAULT_LANGUAGE = "en" // English as default
+        const val DEFAULT_LANGUAGE = "en" // English as default
     }
 }

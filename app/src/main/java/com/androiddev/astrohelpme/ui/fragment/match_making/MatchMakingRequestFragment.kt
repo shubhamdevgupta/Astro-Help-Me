@@ -38,6 +38,9 @@ class MatchMakingRequestFragment :
             binding.llMaleLayout.visibility = View.GONE
         }
 
+        binding.icBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
 
         binding.etDateOfBirthMale.setOnClickListener {
             val calendar = Calendar.getInstance()

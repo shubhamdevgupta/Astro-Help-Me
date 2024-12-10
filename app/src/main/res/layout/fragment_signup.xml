@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:gravity="center"
-                    android:text="Sign Up"
+                    android:text="@string/sign_up"
                     android:textColor="@color/white"
                     android:textSize="36sp" />
 
@@ -55,7 +55,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Mobile Number"
+                        android:hint="@string/mobile_number"
                         android:inputType="number"
                         android:maxLength="10"
                         android:text="@={viewModel.mobileNumber}"
@@ -72,7 +72,7 @@
                     android:layout_marginTop="18dp"
                     android:backgroundTint="#ffffff"
                     android:onClick="@{viewModel::onSubmitClick}"
-                    android:text="Next"
+                    android:text="@string/next"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Already Have an account? Sign in"
+                    android:text="@string/already_have_an_account_sign_in"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
