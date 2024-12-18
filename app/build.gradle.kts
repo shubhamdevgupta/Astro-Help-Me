@@ -103,6 +103,4 @@ dependencies {
 
     implementation("com.karumi:dexter:5.0.0")
 
-    implementation("com.sendbird.sdk:uikit:3.+")
-
 }

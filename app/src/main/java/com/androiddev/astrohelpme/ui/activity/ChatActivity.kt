@@ -1,12 +1,11 @@
 package com.androiddev.astrohelpme.ui.activity
 
 import android.os.Bundle
-import com.sendbird.uikit.SendbirdUIKit
-import com.sendbird.uikit.activities.ChannelActivity
-import com.sendbird.uikit.activities.ChannelListActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.androiddev.astrohelpme.utils.helper.AppConstants
 
 
-class ChatActivity : ChannelListActivity() {
+class ChatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

@@ -50,7 +50,7 @@ class DashboardFragment : Fragment() {
             comingSoon()
         }
         binding.icTalktoAstrologer.setOnClickListener {
-            comingSoon()
+
         }
         binding.icSwastik.setOnClickListener {
             parentFragmentManager.beginTransaction()
